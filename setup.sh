@@ -15,6 +15,9 @@ df_run() {
     source ./install/oh-my-zsh.sh "${1}"
     cd "${DF_HOME}"
     source ./install/oh-my-zsh-theme-powerlevel9k.sh "${1}"
+
+    ln -fs ~/.dotfiles/zshrc.sh ~/.zshrc
+    chsh -s $(grep /zsh$ /etc/shells | tail -1)
 }
 
 case "$1" in
