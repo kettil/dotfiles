@@ -7,7 +7,7 @@ export PATH=$DOTS/bin:$PATH
 # list of oh-my-zsh plugins
 plugins=(git docker npm)
 
-if [ "${OSTYPE:0:6}" == "darwin" ]; then
+if [ ! -e /usr/local/bin/brew ]; then
     plugins+=(brew)
 fi
 
