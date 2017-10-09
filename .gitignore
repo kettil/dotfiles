@@ -1,0 +1,8 @@
+.DS_Store
+
+# dotfiles - folders
+/gits
+
+# dotfiles - files
+/zshrc.sh
+/zshrc_oh-my-zsh.sh
