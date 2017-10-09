@@ -7,7 +7,7 @@ export PATH=$DOTS/bin:$PATH
 # list of oh-my-zsh plugins
 plugins=(git docker npm)
 
-if [ ! -e /usr/local/bin/brew ]; then
+if [ -e /usr/local/bin/brew ]; then
     plugins+=(brew)
 fi
 
