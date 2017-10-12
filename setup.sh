@@ -17,7 +17,9 @@ df_run() {
     source ./install/oh-my-zsh-theme-powerlevel9k.sh "${1}"
 
     ln -fs ~/.dotfiles/zshrc.sh ~/.zshrc
-    chsh -s $(grep /zsh$ /etc/shells | tail -1)
+    
+    echo "you must call following command if you want to use the zsh shell"
+    echo "chsh -s $(grep /zsh$ /etc/shells | tail -1)""
 }
 
 case "$1" in
