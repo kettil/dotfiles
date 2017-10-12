@@ -6,7 +6,7 @@ DF_TARGET="${DF_GITS}/oh-my-zsh/plugins"
 
 df_install() {
     echo "####################"
-    echo "# oh-my-zsh : theme : install (${DF_NAME})"
+    echo "# oh-my-zsh : plugin : install (${DF_NAME})"
     if [ -d "${DF_GITS}/${DF_FULLNAME}" ]; then
         cd "${DF_GITS}/${DF_FULLNAME}"
         git pull --rebase --stat origin master
@@ -16,14 +16,14 @@ df_install() {
 
     echo ""
     echo "####################"
-    echo "# oh-my-zsh : theme : create link (${DF_NAME})"
+    echo "# oh-my-zsh : plugin : create link (${DF_NAME})"
     mkdir -p "${DF_TARGET}"
     ln -sf "${DF_GITS}/${DF_FULLNAME}" "${DF_TARGET}/${DF_NAME}"
 }
 
 df_update() {
     echo "####################"
-    echo "# oh-my-zsh : theme : update ${DF_NAME}"
+    echo "# oh-my-zsh : plugin : update ${DF_NAME}"
     cd "${DF_GITS}/${DF_FULLNAME}"
     git pull --rebase --stat origin master
 }
