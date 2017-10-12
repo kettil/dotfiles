@@ -7,11 +7,13 @@ export TERM="xterm-256color"
 export PATH=$DOTS/bin:$PATH
 
 # list of oh-my-zsh plugins
-plugins=(git docker npm)
+plugins=(git docker npm zsh-autosuggestions zsh-syntax-highlighting)
 
 if [ -e /usr/local/bin/brew ]; then
     plugins+=(brew)
 fi
+
+zstyle ':completion:*' special-dirs true
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 

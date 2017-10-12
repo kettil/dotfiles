@@ -15,6 +15,10 @@ df_run() {
     source ./install/oh-my-zsh.sh "${1}"
     cd "${DF_HOME}"
     source ./install/oh-my-zsh-theme-powerlevel9k.sh "${1}"
+    cd "${DF_HOME}"
+    source ./install/oh-my-zsh-plugin-autosuggestions.sh "${1}"
+    cd "${DF_HOME}"
+    source ./install/oh-my-zsh-plugin-syntax-highlighting.sh "${1}"
 
     ln -fs ~/.dotfiles/zshrc.sh ~/.zshrc
 
