@@ -18,8 +18,11 @@ df_run() {
 
     ln -fs ~/.dotfiles/zshrc.sh ~/.zshrc
 
-    echo "you must call following command if you want to use the zsh shell"
-    echo "chsh -s $(grep /zsh$ /etc/shells | tail -1)"
+    echo "####################"
+    echo "#"
+    echo "# you must call following command if you want to use the zsh shell"
+    echo "# chsh -s $(grep /zsh$ /etc/shells | tail -1)"
+    echo "#"
 }
 
 case "$1" in
