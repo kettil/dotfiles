@@ -1,6 +1,7 @@
 #!/bin/bash
 
-DF_NAME="zsh-syntax-highlighting"
+DF_URL="${3}"
+DF_NAME="${2}"
 DF_FULLNAME="oh-my-zsh-plugin-${DF_NAME}"
 DF_TARGET="${DF_GITS}/oh-my-zsh/plugins"
 
@@ -11,7 +12,7 @@ df_install() {
         cd "${DF_GITS}/${DF_FULLNAME}"
         git pull --rebase --stat origin master
     else
-        git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git "${DF_GITS}/${DF_FULLNAME}"
+        git clone --depth=1 "${DF_URL}" "${DF_GITS}/${DF_FULLNAME}"
     fi
 
     echo ""
