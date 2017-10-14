@@ -45,7 +45,7 @@ fi
 source $DOTS/zshrc_oh-my-zsh.sh
 
 # alias list
-alias ll='ll -lisah'
+alias ll='ls -lisah'
 
 
 if [ -e "$HOME/.zshrc_post.zsh" ]; then
