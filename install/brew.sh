@@ -20,6 +20,11 @@ df_install() {
     echo "# brew : install unrar"
     brew install unrar
 
+    echo ""
+    echo "####################"
+    echo "# brew : install tree"
+    brew install tree
+
 }
 
 df_update() {
