@@ -31,13 +31,13 @@ df_update() {
 
 
 case "$1" in
-  install)
-    df_install
-    ;;
-  update)
-    df_update
-    ;;
-  *)
-    echo "Usage: $0 {install|update}"
+    install)
+        df_install
+        ;;
+    update)
+        df_update
+        ;;
+    *)
+        echo "Usage: $0 {install|update}"
 esac
 echo ""

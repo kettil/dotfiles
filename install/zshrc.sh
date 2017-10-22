@@ -16,12 +16,12 @@ if [ "${DF_HOME}" == "" ] || [ "${DF_GITS}" == "" ]; then
 fi
 
 case "$1" in
-  install)
-    df_install
-    ;;
-  update)
-    ;;
-  *)
-    echo "Usage: $0 {install|update}"
+    install)
+      df_install
+      ;;
+    update)
+      ;;
+    *)
+      echo "Usage: $0 {install|update}"
 esac
 echo ""

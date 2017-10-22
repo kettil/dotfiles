@@ -32,12 +32,12 @@ df_run() {
 }
 
 case "$1" in
-  install)
-    df_run "install"
-    ;;
-  update)
-    df_run "update"
-    ;;
-  *)
-    echo "Usage: $0 {install|update}"
+    install)
+        df_run "install"
+        ;;
+    update)
+        df_run "update"
+        ;;
+    *)
+        echo "Usage: $0 {install|update}"
 esac

@@ -50,13 +50,13 @@ if [ ! -e /usr/local/bin/brew ]; then
 fi
 
 case "$1" in
-  install)
-    df_install
-    ;;
-  update)
-    df_update
-    ;;
-  *)
-    echo "Usage: $0 {install|update}"
+    install)
+        df_install
+        ;;
+    update)
+        df_update
+        ;;
+    *)
+        echo "Usage: $0 {install|update}"
 esac
 echo ""
