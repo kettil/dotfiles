@@ -1,0 +1,18 @@
+FROM debian:stretch
+
+MAINTAINER Kjell Dießel <development@kettil.de>
+
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update -q               \
+    && apt-get install -qy          \
+        texlive                     \
+        cm-super                    \
+    && rm -rf /var/lib/apt/lists/*
+# texlive or texlive-full
+
+WORKDIR /data
+
+VOLUME ["/data"]
+
+ENTRYPOINT ["/usr/bin/pdflatex"]

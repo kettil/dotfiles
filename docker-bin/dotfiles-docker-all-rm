@@ -1,0 +1,12 @@
+#!/bin/sh
+
+cd "$(dirname "${0}")"
+
+for file in ./dotfiles-docker-rm-*; do
+    echo "####################"
+    echo "delete the container dotfiles/${file:21}"
+    echo ""
+
+    # call the script
+    ${file}
+done

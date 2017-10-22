@@ -6,3 +6,7 @@
 # dotfiles - files
 /zshrc.sh
 /zshrc_oh-my-zsh.sh
+
+# special docker files
+/docker-bin/dotfiles-docker-build-*
+/docker-bin/dotfiles-docker-rm-*

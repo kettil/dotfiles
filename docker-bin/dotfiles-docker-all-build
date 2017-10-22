@@ -1,0 +1,21 @@
+#!/bin/sh
+
+cd "$(dirname "${0}")"
+
+for file in ./dotfiles-docker-build-*; do
+    echo "####################"
+    echo "build container dotfiles/${file:24}"
+    echo ""
+
+    # call the script
+    ${file}
+
+    if [ $? -ne 0 ]; then
+        echo ""
+        echo "Error in build process of the container dotfiles/${file:24}"
+        echo ""
+        exit -1
+
+    fi
+    echo ""
+done

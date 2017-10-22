@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# run docker container
+docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data dotfiles/latex "$@"
+
+# redirects the exit status
+exit $?

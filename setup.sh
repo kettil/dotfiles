@@ -8,7 +8,9 @@ DF_GITS="${DF_HOME}/gits"
 df_run() {
     mkdir -p "${DF_GITS}"
 
-    #source ./install/brew.sh "${1}"
+    source ./install/brew.sh "${1}"
+    cd "${DF_HOME}"
+    source ./install/docker-scripts.sh "${1}"
     cd "${DF_HOME}"
     source ./install/zshrc.sh "${1}"
     cd "${DF_HOME}"
