@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# checks if the image exists, if not, it is created
+$(dirname $0)/../docker/docker-create.sh latex
+
+# run docker container
+docker run --rm -i --user="$(id -u):$(id -g)" --entrypoint /usr/bin/xelatex --net=none -v "$PWD":/data dotfiles/latex "$@"
+
+# redirects the exit status
+exit $?
