@@ -25,6 +25,11 @@ df_install() {
     echo "# brew : install tree"
     brew install tree
 
+    echo ""
+    echo "####################"
+    echo "# brew : install node"
+    brew install node
+
 }
 
 df_update() {
