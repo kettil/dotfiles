@@ -15,6 +15,7 @@ if [ "$(which docker | cut -d" " -f1)" != "" ]; then
     export PATH=$DOTS/docker-bin:$PATH
 fi
 
+# homebrew settings
 if [ -e /usr/local/bin/brew ]; then
     plugins+=(brew)
     # disabled homebrew analytics mode
