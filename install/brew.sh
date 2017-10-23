@@ -31,6 +31,10 @@ df_update() {
     echo "####################"
     echo "# brew : update"
     brew update
+
+    echo "####################"
+    echo "# brew : upgrade"
+    brew upgrade
 }
 
 if [ "${OSTYPE:0:6}" != "darwin" ]; then
