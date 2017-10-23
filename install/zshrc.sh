@@ -20,6 +20,7 @@ case "$1" in
       df_install
       ;;
     update)
+      df_install
       ;;
     *)
       echo "Usage: $0 {install|update}"
