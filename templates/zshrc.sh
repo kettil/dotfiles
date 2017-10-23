@@ -16,6 +16,8 @@ plugins=(git docker npm zsh-autosuggestions zsh-syntax-highlighting)
 
 if [ -e /usr/local/bin/brew ]; then
     plugins+=(brew)
+    # disabled homebrew analytics mode
+    export HOMEBREW_NO_ANALYTICS=1
 fi
 
 zstyle ':completion:*' special-dirs true
