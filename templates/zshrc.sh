@@ -6,13 +6,14 @@ export TERM="xterm-256color"
 # dotfiles bin folder
 export PATH=$DOTS/bin:$PATH
 
+# list of oh-my-zsh plugins
+plugins=(git npm zsh-autosuggestions zsh-syntax-highlighting)
+
 # added special docker scripts, if docker is installed
 if [ "$(which docker | cut -d" " -f1)" != "" ]; then
+    plugins+=(docker)
     export PATH=$DOTS/docker-bin:$PATH
 fi
-
-# list of oh-my-zsh plugins
-plugins=(git docker npm zsh-autosuggestions zsh-syntax-highlighting)
 
 if [ -e /usr/local/bin/brew ]; then
     plugins+=(brew)
