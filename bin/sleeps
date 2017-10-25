@@ -1,0 +1,134 @@
+#!/bin/bash
+
+message_help() {
+	echo "$0 number[suffix]"
+	echo ""
+	echo "suffix: 'm' for minutes (default)"
+	echo "        'h' for hours"
+	echo "        'd' for days"
+	echo ""
+}
+
+# Gibt die help Information aus
+if [ "${1}" == "--help" ]; then
+	message_help
+	exit 0
+fi
+
+# Gibt die Warte-Zahl Zurück
+NUMBER=$(echo "${1}" | sed -e 's/[^0-9\.]//g')
+# Suffix, wenn vorhanden
+SUFFIX=$(echo "${1}" | sed -e 's/[^dhm]//g')
+
+# Keine Zahl gefunden
+if [ "${NUMBER}" == "" ]; then
+	echo "ERROR: number must be defined"
+	echo ""
+	message_help
+	exit -1
+fi
+
+# Zahl ist nicht größer 0
+if [ "${NUMBER}" == "0" -o "${1}" != "${NUMBER}${SUFFIX}" ]; then
+	echo "ERROR: number must be a positive integer number"
+	echo ""
+	message_help
+	exit -1
+fi
+# Wenn der SUFFIX leer ist, wird der default-Wert genommen
+if [ "${SUFFIX}" == "" ]; then
+	SUFFIX="m"
+fi
+
+# Auswertung des SUFFIX
+case "${SUFFIX}" in
+	d)
+		# days
+		MINUTES=$(echo "scale=10; ${NUMBER} * 60 * 24" | bc)
+		;;
+	h)
+		# hours
+		MINUTES=$(echo "scale=10; ${NUMBER} * 60" | bc)
+		;;
+	m)
+		# minutes
+		MINUTES="${NUMBER}"
+		;;
+	*)
+		echo "ERROR: unknown suffix"
+		echo ""
+		message_help
+		exit -1
+		;;
+esac
+
+# Runden die Zahl ab
+i=$(echo "${MINUTES}" | sed -e 's/\.[0-9]*$//')
+
+# Extrahiert die Kommazahl, wenn vorhanden
+RESIDUE=$(echo "scale=10; ${MINUTES} - ${i}" | bc)
+
+# Debug Ausgaben
+#echo "Number:  ${NUMBER}"
+#echo "Suffix:  ${SUFFIX}"
+#echo "Minuten: ${MINUTES}"
+#echo "Index:   ${i}"
+#echo "Rest:    ${RESIDUE}"
+#echo "WAIT:    $(echo "scale=10; ${RESIDUE} * 60" | bc)"
+
+# Startzeit
+#date +%H:%M
+
+# Wartezeit von der Kommazahl
+if [ $(echo "scale=10; ${RESIDUE} * 100" | bc | sed -e 's/\.[0-9]*$//') -gt 0 ]; then
+	sleep $(echo "scale=10; ${RESIDUE} * 60" | bc)
+fi
+
+while [ ${i} -ge 1 ]; do
+	# Ob die Wartezeit größer als 60 Minuten ist
+	if [ ${i} -gt 60 ]; then
+		# Prüft, ob die Zahl genau durch 15 teilbar ist
+		if [ $(echo "${i}" | awk '{print $1 % 15}') -ne 0 ]; then
+			# Zahl ist nicht durch 15 teilbar
+			#
+			# Es wird solange gewartet,
+			# bis die Zahl durch 15 teilbar ist
+			t=$(echo "${i}" | awk '{print $1 % 15}')
+			echo -n "."
+			sleep $[60 * ${t}]
+			#sleep 1
+			i=$[${i} - ${t}]
+		else
+			# Anzeige in 15 Minutentakt
+			if [ $(echo "${i}" | awk '{print $1 % 60}') -eq 0 ]; then
+				echo -n "$[${i} / 60]h"
+			else
+				echo -n "."
+			fi
+			# 15 Minuten
+			sleep 900
+			#sleep 1
+			i=$[${i} - 15]
+		fi
+	else
+		# Anzeige in Minutentakt
+		if [ $(echo "${i}" | awk '{print $1 % 5}') -eq 0 ]; then
+			#if [ ${i} -eq 60 ]; then
+			#	echo -n "1h"
+			#else
+			#	echo -n "${i}m"
+			#fi
+			echo -n "${i}m"
+		else
+			echo -n "."
+		fi
+		# 1 Minute
+		sleep 60
+		#sleep 1
+		i=$[${i} - 1]
+	fi
+done
+echo ""
+
+# Endzeit
+#date +%H:%M
