@@ -7,6 +7,11 @@ df_install() {
 
     echo ""
     echo "####################"
+    echo "# brew : install zsh"
+    brew install zsh
+
+    echo ""
+    echo "####################"
     echo "# brew : install htop"
     brew install htop
 
