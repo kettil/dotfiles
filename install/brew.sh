@@ -15,6 +15,7 @@ df_install() {
     df_install_brew unrar
     df_install_brew tree
     df_install_brew node
+    df_install_brew youtube-dl ffmpeg atomicparsley
 }
 
 df_install_brew() {
