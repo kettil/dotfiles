@@ -7,34 +7,20 @@ df_install() {
 
     echo ""
     echo "####################"
-    echo "# brew : install zsh"
-    brew install zsh
+    echo "# brew : install"
 
+    df_install_brew zsh
+    df_install_brew htop
+    df_install_brew iftop
+    df_install_brew unrar
+    df_install_brew tree
+    df_install_brew node
+}
+
+df_install_brew() {
     echo ""
-    echo "####################"
-    echo "# brew : install htop"
-    brew install htop
-
-    echo ""
-    echo "####################"
-    echo "# brew : install iftop"
-    brew install iftop
-
-    echo ""
-    echo "####################"
-    echo "# brew : install unrar"
-    brew install unrar
-
-    echo ""
-    echo "####################"
-    echo "# brew : install tree"
-    brew install tree
-
-    echo ""
-    echo "####################"
-    echo "# brew : install node"
-    brew install node
-
+    echo "- $1"
+    brew install "$1"
 }
 
 df_update() {
