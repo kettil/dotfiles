@@ -29,6 +29,10 @@ df_update() {
     git pull --rebase --stat origin master
 }
 
+if [ "${DF_GITS}" == "" ]; then
+    echo '$DF_GITS is not defined'
+    exit
+fi
 
 case "$1" in
     install)
