@@ -8,9 +8,21 @@ df_install() {
     # change default save location to local storage from iCloud for all Apps
     echo " - NSDocumentSaveNewDocumentsToCloud"
     defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+    echo "####################"
+    echo "# macos : copy fonts"
+    echo ""
+    mkdir -pf ~/Library/Fonts
+    copy $DF_HOME/fonts/*.ttf ~/Library/Fonts
+
 }
 
 if [ "${OSTYPE:0:6}" != "darwin" ]; then
+    exit
+fi
+
+if [ "${DF_HOME}" == "" ]; then
+    echo '$DF_HOME is not defined'
     exit
 fi
 
