@@ -12,9 +12,9 @@ df_install() {
     df_install_brew zsh
     df_install_cask osxfuse
     df_install_brew sshfs
+    df_install_brew nmap fping
     df_install_brew htop iftop
-    df_install_brew wget unrar
-    df_install_brew tree
+    df_install_brew tree wget unrar
     df_install_brew node
     df_install_brew ffmpeg mkvtoolnix mp4v2
     df_install_brew youtube-dl atomicparsley
