@@ -9,6 +9,7 @@ df_install() {
     echo " - NSDocumentSaveNewDocumentsToCloud"
     defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
+    echo ""
     echo "####################"
     echo "# macos : copy fonts"
     echo ""
