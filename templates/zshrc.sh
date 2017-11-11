@@ -22,6 +22,11 @@ if [ -e /usr/local/bin/brew ]; then
     export HOMEBREW_NO_ANALYTICS=1
 fi
 
+# load macos plugin if it is a mac
+if [ "${OSTYPE:0:6}" == "darwin" ]; then
+    plugins+=(osx)
+fi
+
 zstyle ':completion:*' special-dirs true
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
