@@ -15,6 +15,8 @@ df_install() {
     mkdir -pf ~/Library/Fonts
     copy $DF_HOME/fonts/*.ttf ~/Library/Fonts
 
+
+# https://wiki.debian.org/Fonts
 }
 
 if [ "${OSTYPE:0:6}" != "darwin" ]; then
