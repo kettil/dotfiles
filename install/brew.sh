@@ -10,18 +10,26 @@ df_install() {
     echo "# brew : install"
 
     df_install_brew zsh
-    df_install_brew htop
-    df_install_brew iftop
-    df_install_brew unrar
+    df_install_cask osxfuse
+    df_install_brew sshfs
+    df_install_brew htop iftop
+    df_install_brew wget unrar
     df_install_brew tree
     df_install_brew node
-    df_install_brew youtube-dl ffmpeg atomicparsley
+    df_install_brew ffmpeg mkvtoolnix mp4v2
+    df_install_brew youtube-dl atomicparsley
 }
 
 df_install_brew() {
     echo ""
     echo "- $1"
-    brew install "$1"
+    brew install "$@"
+}
+
+df_install_cask() {
+    echo ""
+    echo "- cask - $1"
+    brew cask install "$@"
 }
 
 df_update() {
