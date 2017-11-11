@@ -12,11 +12,10 @@ df_install() {
     echo "####################"
     echo "# macos : copy fonts"
     echo ""
-    mkdir -pf ~/Library/Fonts
-    copy $DF_HOME/fonts/*.ttf ~/Library/Fonts
+    mkdir -p ~/Library/Fonts
+    cp $DF_HOME/fonts/*.ttf ~/Library/Fonts
 
-
-# https://wiki.debian.org/Fonts
+    # https://wiki.debian.org/Fonts
 }
 
 if [ "${OSTYPE:0:6}" != "darwin" ]; then
