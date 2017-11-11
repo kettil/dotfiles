@@ -23,7 +23,7 @@ if [ -e /usr/local/bin/brew ]; then
 fi
 
 # load macos plugin if it is a mac
-if [ "${OSTYPE:0:6}" == "darwin" ]; then
+if [ "${OSTYPE:0:6}" = "darwin" ]; then
     plugins+=(osx)
 fi
 
