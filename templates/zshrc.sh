@@ -13,6 +13,10 @@ plugins=(git npm zsh-autosuggestions zsh-syntax-highlighting)
 if [ "$(which docker | cut -d" " -f1)" != "" ]; then
     plugins+=(docker)
     export PATH=$DOTS/docker-bin:$PATH
+
+    if [ "$(which docker-compose | cut -d" " -f1)" != "" ]; then
+        plugins+=(docker-compose)
+    fi
 fi
 
 # homebrew settings
