@@ -22,13 +22,13 @@ df_install() {
 
 df_install_brew() {
     echo ""
-    echo "- $1"
+    echo "- $@"
     brew install "$@"
 }
 
 df_install_cask() {
     echo ""
-    echo "- cask - $1"
+    echo "- cask - $@"
     brew cask install "$@"
 }
 
