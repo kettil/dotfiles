@@ -16,7 +16,7 @@ df_install() {
     df_install_brew htop iftop
     df_install_brew tree wget unrar
     df_install_brew node
-    df_install_brew ffmpeg mkvtoolnix mp4v2
+    df_install_brew ffmpeg mkvtoolnix mp4v2 libav
     df_install_brew youtube-dl atomicparsley
 }
 
