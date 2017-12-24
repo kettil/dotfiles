@@ -10,13 +10,20 @@ df_install() {
     echo "# brew : install"
 
     df_install_brew zsh
+    # Fuse
     df_install_cask osxfuse
     df_install_brew sshfs
+    # Network
     df_install_brew nmap fping
+    # monitoring
     df_install_brew htop iftop
+    # system tools
     df_install_brew tree wget unrar
+    # runtimes
     df_install_brew node
+    # videos
     df_install_brew ffmpeg mkvtoolnix mp4v2 libav
+    # youtube
     df_install_brew youtube-dl atomicparsley
 }
 
