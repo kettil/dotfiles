@@ -22,7 +22,8 @@ df_install() {
     # runtimes
     df_install_brew node
     # videos
-    df_install_brew ffmpeg mkvtoolnix mp4v2 libav
+    df_install_brew ffmpeg mkvtoolnix mp4v2
+    # maybe: libav
     # youtube
     df_install_brew youtube-dl atomicparsley
 }
