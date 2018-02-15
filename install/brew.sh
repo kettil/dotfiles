@@ -27,7 +27,9 @@ df_install() {
     # youtube
     df_install_brew youtube-dl atomicparsley
     # pdf
-    df_install_brew gs
+    df_install_brew gs qpdf
+    # speed test
+    df_install_brew speedtest-cli
 }
 
 df_install_brew() {
