@@ -30,6 +30,8 @@ df_install() {
     df_install_brew gs qpdf
     # speed test
     df_install_brew speedtest-cli
+    # check sd cards
+    df_install_brew f3
 }
 
 df_install_brew() {
