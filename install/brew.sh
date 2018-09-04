@@ -32,6 +32,8 @@ df_install() {
     df_install_brew speedtest-cli
     # check sd cards
     df_install_brew f3
+
+    df_copy_files
 }
 
 df_install_brew() {
@@ -54,6 +56,14 @@ df_update() {
     echo "####################"
     echo "# brew : upgrade"
     brew upgrade
+
+    df_copy_files
+}
+
+df_copy_files() {
+    # copy files in the bin folder
+    cp $DF_HOME/bin-inactive/brew-clear $DF_HOME/bin
+    cp $DF_HOME/bin-inactive/flash-check.sh $DF_HOME/bin
 }
 
 if [ "${OSTYPE:0:6}" != "darwin" ]; then
