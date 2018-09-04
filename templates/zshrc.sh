@@ -22,6 +22,7 @@ fi
 # homebrew settings
 if [ -e /usr/local/bin/brew ]; then
     plugins+=(brew)
+    export PATH=$DOTS/brew-bin:$PATH
     # disabled homebrew analytics mode
     export HOMEBREW_NO_ANALYTICS=1
 fi
