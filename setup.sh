@@ -15,7 +15,7 @@ df_run() {
     cd "${DF_HOME}"
     source ./install/brew.sh "${1}"
     cd "${DF_HOME}"
-    source ./install/docker-scripts.sh "${1}"
+    source ./install/docker.sh "${1}"
     cd "${DF_HOME}"
     source ./install/zshrc.sh "${1}"
     cd "${DF_HOME}"
