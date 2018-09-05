@@ -1,18 +1,18 @@
 #!/bin/bash
 
 message_help() {
-	echo "$0 number[suffix]"
-	echo ""
-	echo "suffix: 'm' for minutes (default)"
-	echo "        'h' for hours"
-	echo "        'd' for days"
-	echo ""
+  echo "$0 number[suffix]"
+  echo ""
+  echo "suffix: 'm' for minutes (default)"
+  echo "        'h' for hours"
+  echo "        'd' for days"
+  echo ""
 }
 
 # show helper information
 if [ "${1}" == "--help" ]; then
-	message_help
-	exit 0
+  message_help
+  exit 0
 fi
 
 # return the wait number
@@ -22,44 +22,44 @@ SUFFIX=$(echo "${1}" | sed -e 's/[^dhm]//g')
 
 # not found a number
 if [ "${NUMBER}" == "" ]; then
-	echo "ERROR: number must be defined"
-	echo ""
-	message_help
-	exit -1
+  echo "ERROR: number must be defined"
+  echo ""
+  message_help
+  exit -1
 fi
 
 # number is not greater then 0
 if [ "${NUMBER}" == "0" -o "${1}" != "${NUMBER}${SUFFIX}" ]; then
-	echo "ERROR: number must be a positive integer number"
-	echo ""
-	message_help
-	exit -1
+  echo "ERROR: number must be a positive integer number"
+  echo ""
+  message_help
+  exit -1
 fi
 # if the SUFFIX is empty, then the default value is taken
 if [ "${SUFFIX}" == "" ]; then
-	SUFFIX="m"
+  SUFFIX="m"
 fi
 
 # evaluation of the SUFFIX
 case "${SUFFIX}" in
-	d)
-		# days
-		MINUTES=$(echo "scale=10; ${NUMBER} * 60 * 24" | bc)
-		;;
-	h)
-		# hours
-		MINUTES=$(echo "scale=10; ${NUMBER} * 60" | bc)
-		;;
-	m)
-		# minutes
-		MINUTES="${NUMBER}"
-		;;
-	*)
-		echo "ERROR: unknown suffix"
-		echo ""
-		message_help
-		exit -1
-		;;
+  d)
+    # days
+    MINUTES=$(echo "scale=10; ${NUMBER} * 60 * 24" | bc)
+    ;;
+  h)
+    # hours
+    MINUTES=$(echo "scale=10; ${NUMBER} * 60" | bc)
+    ;;
+  m)
+    # minutes
+    MINUTES="${NUMBER}"
+    ;;
+  *)
+    echo "ERROR: unknown suffix"
+    echo ""
+    message_help
+    exit -1
+    ;;
 esac
 
 # the number is rounded off
@@ -81,46 +81,46 @@ RESIDUE=$(echo "scale=10; ${MINUTES} - ${i}" | bc)
 
 # waiting time of the point number
 if [ $(echo "scale=10; ${RESIDUE} * 100" | bc | sed -e 's/\.[0-9]*$//') -gt 0 ]; then
-	sleep $(echo "scale=10; ${RESIDUE} * 60" | bc)
+  sleep $(echo "scale=10; ${RESIDUE} * 60" | bc)
 fi
 
 while [ ${i} -ge 1 ]; do
-	# whether the waiting time is greater than 60 minutes
-	if [ ${i} -gt 60 ]; then
-		# check if the number is exactly divisible by 15
-		if [ $(echo "${i}" | awk '{print $1 % 15}') -ne 0 ]; then
-			# number is not divisible by 15
-			#
-			# It is waited until the number is divisible by 15
-			t=$(echo "${i}" | awk '{print $1 % 15}')
-			echo -n "."
-			sleep $[60 * ${t}]
-			#sleep 1
-			i=$[${i} - ${t}]
-		else
-			# display in 15 minute intervals
-			if [ $(echo "${i}" | awk '{print $1 % 60}') -eq 0 ]; then
-				echo -n "$[${i} / 60]h"
-			else
-				echo -n "."
-			fi
-			# 15 minutes
-			sleep 900
-			#sleep 1
-			i=$[${i} - 15]
-		fi
-	else
-		# display in minute intervals
-		if [ $(echo "${i}" | awk '{print $1 % 5}') -eq 0 ]; then
-			echo -n "${i}m"
-		else
-			echo -n "."
-		fi
-		# 1 minute
-		sleep 60
-		#sleep 1
-		i=$[${i} - 1]
-	fi
+  # whether the waiting time is greater than 60 minutes
+  if [ ${i} -gt 60 ]; then
+    # check if the number is exactly divisible by 15
+    if [ $(echo "${i}" | awk '{print $1 % 15}') -ne 0 ]; then
+      # number is not divisible by 15
+      #
+      # It is waited until the number is divisible by 15
+      t=$(echo "${i}" | awk '{print $1 % 15}')
+      echo -n "."
+      sleep $[60 * ${t}]
+      #sleep 1
+      i=$[${i} - ${t}]
+    else
+      # display in 15 minute intervals
+      if [ $(echo "${i}" | awk '{print $1 % 60}') -eq 0 ]; then
+        echo -n "$[${i} / 60]h"
+      else
+        echo -n "."
+      fi
+      # 15 minutes
+      sleep 900
+      #sleep 1
+      i=$[${i} - 15]
+    fi
+  else
+    # display in minute intervals
+    if [ $(echo "${i}" | awk '{print $1 % 5}') -eq 0 ]; then
+      echo -n "${i}m"
+    else
+      echo -n "."
+    fi
+    # 1 minute
+    sleep 60
+    #sleep 1
+    i=$[${i} - 1]
+  fi
 done
 echo ""
 
