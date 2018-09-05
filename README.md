@@ -1,4 +1,5 @@
-# dotfiles
+# Dotfiles 🎃
+
 My dotfiles library
 
 ## install
