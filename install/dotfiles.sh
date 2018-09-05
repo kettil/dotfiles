@@ -5,6 +5,8 @@ df_install() {
     echo "# dotfiles : create symlinks"
 
     find "$DOTS/configs" -type f |
+        grep -vi '/README' |
+        grep -vi '.md$' |
         while read line; do
             DF_FILE="${line/$DOTS\/configs\//}"
             echo "- ~/${DF_FILE}"
