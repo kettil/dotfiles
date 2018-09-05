@@ -9,6 +9,7 @@ df_install() {
         | sed "s|^export DOTS=.*$|export DOTS=${DF_HOME}|"  \
         > "${DF_HOME}/zshrc.sh"
 
+    echo ""
     echo "####################"
     echo "# zshrc : create symlink"
     ln -fs "${DF_HOME}/zshrc.sh" ~/.zshrc
