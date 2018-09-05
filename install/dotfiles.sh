@@ -10,6 +10,7 @@ df_install() {
         while read line; do
             DF_FILE="${line/$DOTS\/configs\//}"
             echo "- ~/${DF_FILE}"
+            mkdir -p "$(dirname ~/"${DF_FILE}")"
             ln -sf "$DOTS/configs/${DF_FILE}" ~/"${DF_FILE}"
         done
 }
