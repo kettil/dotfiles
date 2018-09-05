@@ -18,4 +18,5 @@
 - [sh](./sh.nanorc) [[origin](https://github.com/scopatz/nanorc/blob/master/sh.nanorc)]
 - [SQL](./sql.nanorc) [[origin](https://github.com/scopatz/nanorc/blob/master/sql.nanorc)]
 - [systemd](./systemd.nanorc) [[origin](https://github.com/scopatz/nanorc/blob/master/systemd.nanorc)]
+- [tex](./tex.nanorc)
 - [zsh](./zsh.nanorc) [[origin](https://github.com/scopatz/nanorc/blob/master/zsh.nanorc)]
