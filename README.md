@@ -12,6 +12,8 @@ cd ~/.dotfiles
 ./setup.sh install
 ```
 
+The font of the terminal must be Droid+Sans+Mono+Awesome.ttf
+
 ## update
 
 ```
