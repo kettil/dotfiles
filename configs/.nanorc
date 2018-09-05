@@ -1,2 +1,19 @@
-# inlcude config from ~/.nano
-include ~/.nano/*.nanorc
+include "~/.nano/Dockerfile.nanorc
+include "~/.nano/arduino.nanorc
+include "~/.nano/css.nanorc
+include "~/.nano/git.nanorc
+include "~/.nano/go.nanorc
+include "~/.nano/html.nanorc
+include "~/.nano/ini.nanorc
+include "~/.nano/javascript.nanorc
+include "~/.nano/js.nanorc
+include "~/.nano/json.nanorc
+include "~/.nano/lua.nanorc
+include "~/.nano/markdown.nanorc
+include "~/.nano/nanorc.nanorc
+include "~/.nano/nginx.nanorc
+include "~/.nano/php.nanorc
+include "~/.nano/sh.nanorc
+include "~/.nano/sql.nanorc
+include "~/.nano/systemd.nanorc
+include "~/.nano/zsh.nanorc
