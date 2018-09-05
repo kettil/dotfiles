@@ -10,3 +10,17 @@ cd ~/.dotfiles
 
 ./setup.sh install
 ```
+
+## update
+
+```
+cd ~/.dotfiles
+
+git pull
+
+./setup.sh update
+```
+
+## dotfiles
+
+All static dotfiles are stored in the [configs](./configs) folder. Via `./setup install` or `./setup update` the files are linked to the home directory. The folder structure of configs is kept in the home directory.
