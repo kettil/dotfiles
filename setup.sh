@@ -26,8 +26,6 @@ df_run() {
     source ./install/oh-my-zsh-plugin.sh "${1}" "zsh-autosuggestions" "https://github.com/zsh-users/zsh-autosuggestions.git"
     cd "${DF_HOME}"
     source ./install/oh-my-zsh-plugin.sh "${1}" "zsh-syntax-highlighting" "https://github.com/zsh-users/zsh-syntax-highlighting.git"
-
-    ln -fs ~/.dotfiles/zshrc.sh ~/.zshrc
 }
 
 case "$1" in
