@@ -21,6 +21,7 @@ fi
 
 # homebrew settings
 if [ -e /usr/local/bin/brew ]; then
+    # plugins is deprecated
     #plugins+=(brew)
     export PATH=$DOTS/brew-bin:$PATH
     # disabled homebrew analytics mode
