@@ -28,17 +28,17 @@ df_run() {
     source ./install/oh-my-zsh-plugin.sh "${1}" "zsh-syntax-highlighting" "https://github.com/zsh-users/zsh-syntax-highlighting.git"
 
     ln -fs ~/.dotfiles/zshrc.sh ~/.zshrc
-
-    echo "####################"
-    echo "#"
-    echo "# you must call following command if you want to use the zsh shell"
-    echo "# chsh -s $(grep /zsh$ /etc/shells | tail -1)"
-    echo "#"
 }
 
 case "$1" in
     install)
         df_run "install"
+
+        echo "####################"
+        echo "#"
+        echo "# you must call following command if you want to use the zsh shell"
+        echo "# chsh -s $(grep /zsh$ /etc/shells | tail -1)"
+        echo "#"
         ;;
     update)
         df_run "update"
