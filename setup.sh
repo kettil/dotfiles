@@ -11,7 +11,7 @@ df_run() {
     cd "${DF_HOME}"
     source ./install/dotfiles.sh "${1}"
     cd "${DF_HOME}"
-    source ./install/macos.sh "${1}"
+    source ./install/os-mac.sh "${1}"
     cd "${DF_HOME}"
     source ./install/brew.sh "${1}"
     cd "${DF_HOME}"
