@@ -8,7 +8,7 @@ df_install() {
     echo "####################"
     echo "# brew : upgrade"
     brew upgrade
-    
+
     echo ""
     echo "####################"
     echo "# brew : install"
@@ -22,7 +22,7 @@ df_install() {
     # monitoring
     df_install_brew htop iftop
     # system tools
-    df_install_brew tree wget unrar
+    df_install_brew nano tree wget unrar
     # runtimes
     df_install_brew node
     # videos
