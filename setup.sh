@@ -9,6 +9,8 @@ df_run() {
     mkdir -p "${DF_GITS}"
 
     cd "${DF_HOME}"
+    source ./install/dotfiles.sh "${1}"
+    cd "${DF_HOME}"
     source ./install/macos.sh "${1}"
     cd "${DF_HOME}"
     source ./install/brew.sh "${1}"
