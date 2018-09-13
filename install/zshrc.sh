@@ -16,7 +16,7 @@ df_install() {
 }
 
 if [ "${DF_HOME}" == "" ]; then
-    echo 'DF_HOME is not defined'
+    echo '$DF_HOME is not defined'
     exit
 fi
 
