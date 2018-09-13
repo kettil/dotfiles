@@ -20,7 +20,7 @@ All scripts/bin folders are defined in the variable $PATH.
 cd ~/.dotfiles && ./setup.sh update
 ```
 
-## ⛄Dotfiles
+## ⛄ Dotfiles
 
 All static dotfiles are stored in the [./configs](./configs) folder. Via `./setup install` or `./setup update` the files are linked to the home directory. The folder structure of configs is kept in the home directory.
 
