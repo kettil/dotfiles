@@ -5,6 +5,7 @@ df_install() {
     echo "# brew : update"
     brew update
 
+    echo ""
     echo "####################"
     echo "# brew : upgrade"
     brew upgrade
@@ -14,11 +15,11 @@ df_install() {
     echo "# brew : install"
 
     df_install_brew zsh
-    # Fuse
+    # fuse
     df_install_cask osxfuse
     df_install_brew sshfs
-    # Network
-    df_install_brew nmap fping
+    # networking
+    df_install_brew nmap fping speedtest-cli
     # monitoring
     df_install_brew htop iftop
     # system tools
@@ -26,14 +27,9 @@ df_install() {
     # runtimes
     df_install_brew node
     # videos
-    df_install_brew ffmpeg mkvtoolnix mp4v2
-    # maybe: libav
-    # youtube
-    df_install_brew youtube-dl atomicparsley
+    df_install_brew ffmpeg mkvtoolnix mp4v2 youtube-dl atomicparsley
     # pdf
     df_install_brew gs qpdf
-    # speed test
-    df_install_brew speedtest-cli
     # check sd cards
     df_install_brew f3
 }

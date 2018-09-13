@@ -1,19 +1,20 @@
 #!/bin/bash
 
-DF_DOCKER_BIN="docker-bin"
+DF_DOCKER_CON="${DF_HOME}/docker"
+DF_DOCKER_BIN="${DF_HOME}/docker-bin"
 DF_DOCKER_PRE="dotfiles-docker"
 
 df_install() {
     echo "####################"
     echo "# docker-scripts : create symbolic links"
     # remove all links
-    rm -f ${DF_DOCKER_PRE}-build-*
-    rm -f ${DF_DOCKER_PRE}-rm-*
+    rm -f ${DF_DOCKER_BIN}/${DF_DOCKER_PRE}-build-*
+    rm -f ${DF_DOCKER_BIN}/${DF_DOCKER_PRE}-rm-*
     # create links
-    for file in ../docker/*; do
+    for file in ${DF_DOCKER_CON}/*; do
         if [ -d "$file" ]; then
-            ln -s ../docker/docker-build.sh ${DF_DOCKER_PRE}-build-$(basename "${file}")
-            ln -s ../docker/docker-rm.sh    ${DF_DOCKER_PRE}-rm-$(basename "${file}")
+            ln -s ${DF_DOCKER_CON}/docker-build.sh ${DF_DOCKER_BIN}/${DF_DOCKER_PRE}-build-$(basename "${file}")
+            ln -s ${DF_DOCKER_CON}/docker-rm.sh    ${DF_DOCKER_BIN}/${DF_DOCKER_PRE}-rm-$(basename "${file}")
         fi
     done
 }
@@ -22,7 +23,10 @@ if [ "$(which docker | cut -d" " -f1)" == "" ]; then
     exit
 fi
 
-cd "$DF_DOCKER_BIN"
+if [ "${DF_HOME}" == "" ]; then
+    echo '$DF_HOME is not defined'
+    exit
+fi
 
 case "$1" in
     install)

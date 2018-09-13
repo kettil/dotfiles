@@ -4,16 +4,21 @@ df_install() {
     echo "####################"
     echo "# dotfiles : create symlinks"
 
-    find "$DOTS/configs" -type f |
+    find "$DF_HOME/configs" -type f |
         grep -vi '/README' |
         grep -vi '.md$' |
         while read line; do
-            DF_FILE="${line/$DOTS\/configs\//}"
+            DF_FILE="${line/$DF_HOME\/configs\//}"
             echo "- ~/${DF_FILE}"
             mkdir -p "$(dirname ~/"${DF_FILE}")"
-            ln -sf "$DOTS/configs/${DF_FILE}" ~/"${DF_FILE}"
+            ln -sf "$DF_HOME/configs/${DF_FILE}" ~/"${DF_FILE}"
         done
 }
+
+if [ "${DF_HOME}" == "" ]; then
+    echo '$DF_HOME is not defined'
+    exit
+fi
 
 case "$1" in
     install)

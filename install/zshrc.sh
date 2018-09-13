@@ -15,8 +15,8 @@ df_install() {
     ln -fs "${DF_HOME}/zshrc.sh" ~/.zshrc
 }
 
-if [ "${DF_HOME}" == "" ] || [ "${DF_GITS}" == "" ]; then
-    echo '$DF_HOME or $DF_GITS is not defined'
+if [ "${DF_HOME}" == "" ]; then
+    echo '$DF_HOME is not defined'
     exit
 fi
 
