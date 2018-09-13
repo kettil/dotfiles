@@ -15,10 +15,10 @@ df_install() {
     echo "# brew : install"
 
     df_install_brew zsh
-    # Fuse
+    # fuse
     df_install_cask osxfuse
     df_install_brew sshfs
-    # Network
+    # networking
     df_install_brew nmap fping
     # monitoring
     df_install_brew htop iftop
