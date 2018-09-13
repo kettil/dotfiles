@@ -7,9 +7,7 @@ My dotfiles library
 ```
 git clone https://github.com/kettil/dotfiles ~/.dotfiles
 
-cd ~/.dotfiles
-
-./setup.sh install
+cd ~/.dotfiles && ./setup.sh install
 ```
 
 The font of the terminal must be Droid+Sans+Mono+Awesome.ttf
@@ -17,11 +15,7 @@ The font of the terminal must be Droid+Sans+Mono+Awesome.ttf
 ## update
 
 ```
-cd ~/.dotfiles
-
-git pull
-
-./setup.sh update
+cd ~/.dotfiles && ./setup.sh update
 ```
 
 ## dotfiles
