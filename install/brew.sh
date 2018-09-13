@@ -2,11 +2,11 @@
 
 df_install() {
     echo "####################"
-    echo "# brew : update"		
+    echo "# brew : update"
     brew update
-   
-    echo "####################"		
-    echo "# brew : upgrade"		
+
+    echo "####################"
+    echo "# brew : upgrade"
     brew upgrade
 
     echo ""
