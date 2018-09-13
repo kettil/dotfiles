@@ -12,6 +12,8 @@ cd ~/.dotfiles && ./setup.sh install
 
 The font of the terminal must be Droid+Sans+Mono+Awesome.ttf
 
+All scripts/bin folders are defined in the variable $PATH.
+
 ## update
 
 ```
@@ -24,13 +26,13 @@ All static dotfiles are stored in the [./configs](./configs) folder. Via `./setu
 
 ## scripts
 
-List of all scripts in [./bin](./bin)
+List of all scripts in [./bin](./bin).
 
 - **sleeps** - sleeps is an extension of **sleep** with a visual representation of the waiting time
 
 ## docker
 
-List of all container in [./docker](./docker) and scripts in [./docker-bin](./docker-bin).
+The container files are in [./docker](./docker) and the associated scripts in [./docker-bin](./docker-bin).
 When a script is called and the container does not exist, it is automatically built.
 
 Containers can be created and deleted manually:
@@ -41,7 +43,7 @@ You can also create or delete all containers at once:
 - dotfiles-docker-all-build
 - dotfiles-docker-all-rm
 
-### Container with scripts
+### Containers (with scripts)
 
 - **latex** - a container with texlive. The following scripts are available:
   - pdflatex
@@ -49,11 +51,11 @@ You can also create or delete all containers at once:
 
 ## brew
 
-[brew](https://brew.sh) is a package manager for MacOS
+[brew](https://brew.sh) is a package manager for MacOS.
 
 The following scripts are installed:
 
-| Category     | Scripts |
+| Category     | Packages |
 | ---          | --- |
 | Fuse         | osxfuse, sshfs |
 | Monitoring   | htop, iftop |
