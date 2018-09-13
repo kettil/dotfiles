@@ -51,7 +51,7 @@ You can also create or delete all containers at once:
 
 ## brew
 
-[brew](https://brew.sh) is a package manager for MacOS.
+[brew](https://brew.sh) is a package manager for macOS.
 
 The following scripts are installed:
 
