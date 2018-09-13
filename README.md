@@ -36,10 +36,12 @@ The container files are in [./docker](./docker) and the associated scripts in [.
 When a script is called and the container does not exist, it is automatically built.
 
 Containers can be created and deleted manually:
-- dotfiles-docker-build-<container name> (e.g. `dotfiles-docker-build-latex`)
-- dotfiles-docker-rm-<container name> (e.g. `dotfiles-docker-rm-latex`)
+
+- dotfiles-docker-build-\<container name\> (e.g. `dotfiles-docker-build-latex`)
+- dotfiles-docker-rm-\<container name\> (e.g. `dotfiles-docker-rm-latex`)
 
 You can also create or delete all containers at once:
+
 - dotfiles-docker-all-build
 - dotfiles-docker-all-rm
 
@@ -55,15 +57,15 @@ You can also create or delete all containers at once:
 
 The following scripts are installed:
 
-| Category     | Packages |
-| ---          | --- |
-| Fuse         | osxfuse, sshfs |
-| Monitoring   | htop, iftop |
-| Networking   | fping, nmap , speedtest-cli |
-| PDF          | gs, qpdf |
-| Runtimes     | nodejs |
-| Shell        | zsh |
-| System Tools | f3, nano, tree, unrar, wget |
+| Category     | Packages                                             |
+| ------------ | ---------------------------------------------------- |
+| Fuse         | osxfuse, sshfs                                       |
+| Monitoring   | htop, iftop                                          |
+| Networking   | fping, nmap , speedtest-cli                          |
+| PDF          | gs, qpdf                                             |
+| Runtimes     | nodejs                                               |
+| Shell        | zsh                                                  |
+| System Tools | f3, nano, tree, unrar, wget                          |
 | Videos       | atomicparsley, ffmpeg, mkvtoolnix, mp4v2, youtube-dl |
 
 #### Scripts
