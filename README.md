@@ -20,17 +20,17 @@ cd ~/.dotfiles && ./setup.sh update
 
 ## dotfiles
 
-All static dotfiles are stored in the [configs](./configs) folder. Via `./setup install` or `./setup update` the files are linked to the home directory. The folder structure of configs is kept in the home directory.
+All static dotfiles are stored in the [./configs](./configs) folder. Via `./setup install` or `./setup update` the files are linked to the home directory. The folder structure of configs is kept in the home directory.
 
 ## scripts
 
-List of all scripts in [bin](./bin)
+List of all scripts in [./bin](./bin)
 
 - **sleeps** - sleeps is an extension of **sleep** with a visual representation of the waiting time
 
 ## docker
 
-List of all container in [docker](./docker) and scripts in [docker-bin](./docker-bin).
+List of all container in [./docker](./docker) and scripts in [./docker-bin](./docker-bin).
 When a script is called and the container does not exist, it is automatically built.
 
 Containers can be created and deleted manually:
