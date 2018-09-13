@@ -27,3 +27,10 @@ git pull
 ## dotfiles
 
 All static dotfiles are stored in the [configs](./configs) folder. Via `./setup install` or `./setup update` the files are linked to the home directory. The folder structure of configs is kept in the home directory.
+
+## scripts
+
+List all scripts in [bin](./bin)
+
+- **sleeps** - sleeps is an extension of **sleep** with a visual representation of the waiting time
+
