@@ -33,3 +33,23 @@ All static dotfiles are stored in the [configs](./configs) folder. Via `./setup 
 List of all scripts in [bin](./bin)
 
 - **sleeps** - sleeps is an extension of **sleep** with a visual representation of the waiting time
+
+## docker
+
+List of all container in [docker](./docker) and scripts in [docker-bin](./docker-bin).
+When a script is called and the container does not exist, it is automatically built.
+
+Containers can be created and deleted manually:
+- dotfiles-docker-build-<container name> (e.g. dotfiles-docker-build-latex)
+- dotfiles-docker-rm-<container name> (e.g. dotfiles-docker-rm-latex)
+
+You can also create or delete all containers at once:
+- dotfiles-docker-all-build
+- dotfiles-docker-all-rm
+
+### Container with scripts
+
+- **latex** - a container with texlive. The following scripts are available:
+  - pdflatex
+  - xelatex
+
