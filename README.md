@@ -36,8 +36,8 @@ The container files are in [./docker](./docker) and the associated scripts in [.
 When a script is called and the container does not exist, it is automatically built.
 
 Containers can be created and deleted manually:
-- dotfiles-docker-build-<container name> (e.g. dotfiles-docker-build-latex)
-- dotfiles-docker-rm-<container name> (e.g. dotfiles-docker-rm-latex)
+- dotfiles-docker-build-<container name> (e.g. `dotfiles-docker-build-latex`)
+- dotfiles-docker-rm-<container name> (e.g. `dotfiles-docker-rm-latex`)
 
 You can also create or delete all containers at once:
 - dotfiles-docker-all-build
@@ -65,4 +65,12 @@ The following scripts are installed:
 | Shell        | zsh |
 | System Tools | f3, nano, tree, unrar, wget |
 | Videos       | atomicparsley, ffmpeg, mkvtoolnix, mp4v2, youtube-dl |
- 
+
+#### Scripts
+
+List of all scripts in [./brew-bin](./brew-bin).
+
+- **brew-clear.sh** - deletes the old versions of the packages from Homebrew (e.g. `brew-clear.sh`).
+- **flash-check.sh** - checks flash memory cards for their size (e.g. `flash-check.sh /path/to/flashcard`). The flash memory card should be free.
+- **pdf-merged.sh** - merges many PDF files into one (e.g. `pdf-merged.sh 1.pdf 2.pdf`).
+- **pdf-smaller.sh** - reduce the size of a PDF, if possible (e.g. `pdf-smaller.sh 1.pdf`).
