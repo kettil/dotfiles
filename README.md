@@ -30,7 +30,6 @@ All static dotfiles are stored in the [configs](./configs) folder. Via `./setup 
 
 ## scripts
 
-List all scripts in [bin](./bin)
+List of all scripts in [bin](./bin)
 
 - **sleeps** - sleeps is an extension of **sleep** with a visual representation of the waiting time
-
