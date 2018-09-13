@@ -61,11 +61,11 @@ The following scripts are installed:
 | ------------ | ---------------------------------------------------- |
 | Fuse         | osxfuse, sshfs                                       |
 | Monitoring   | htop, iftop                                          |
-| Networking   | fping, nmap , speedtest-cli                          |
+| Networking   | fping, nmap, speedtest-cli                           |
 | PDF          | gs, qpdf                                             |
 | Runtimes     | nodejs                                               |
 | Shell        | zsh                                                  |
-| System Tools | f3, nano, p7zip, tree, unrar, wget                   |
+| System Tools | f3, git, nano, p7zip, tree, unrar, wget              |
 | Videos       | atomicparsley, ffmpeg, mkvtoolnix, mp4v2, youtube-dl |
 
 #### Scripts
