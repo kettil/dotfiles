@@ -1,7 +1,13 @@
 #!/bin/bash
 
 df_install() {
-    df_update
+    echo "####################"
+    echo "# brew : update"		
+    brew update
+   
+    echo "####################"		
+    echo "# brew : upgrade"		
+    brew upgrade
 
     echo ""
     echo "####################"
