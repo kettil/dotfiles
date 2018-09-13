@@ -49,7 +49,7 @@ You can also create or delete all containers at once:
   - pdflatex
   - xelatex
 
-## brew
+## brew (macOS only)
 
 [brew](https://brew.sh) is a package manager for macOS.
 
