@@ -71,6 +71,6 @@ The following scripts are installed:
 List of all scripts in [./brew-bin](./brew-bin).
 
 - **brew-clear.sh** - deletes the old versions of the packages from Homebrew (e.g. `brew-clear.sh`).
-- **flash-check.sh** - checks flash memory cards for their size (e.g. `flash-check.sh /path/to/flashcard`). The flash memory card should be free.
+- **flash-check.sh** - checks flash memory cards for their size (e.g. `flash-check.sh /path/to/flashcard`). The flash memory card should be empty.
 - **pdf-merged.sh** - merges many PDF files into one (e.g. `pdf-merged.sh 1.pdf 2.pdf`).
 - **pdf-smaller.sh** - reduce the size of a PDF, if possible (e.g. `pdf-smaller.sh 1.pdf`).
