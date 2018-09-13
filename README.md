@@ -47,3 +47,20 @@ You can also create or delete all containers at once:
   - pdflatex
   - xelatex
 
+## brew
+
+[brew](https://brew.sh) is a package manager for MacOS
+
+The following scripts are installed:
+
+| Category     | Scripts |
+| ---          | --- |
+| Fuse         | osxfuse, sshfs |
+| Monitoring   | htop, iftop |
+| Networking   | fping, nmap , speedtest-cli |
+| PDF          | gs, qpdf |
+| Runtimes     | nodejs |
+| Shell        | zsh |
+| System Tools | f3, nano, tree, unrar, wget |
+| Videos       | atomicparsley, ffmpeg, mkvtoolnix, mp4v2, youtube-dl |
+ 
