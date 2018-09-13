@@ -43,7 +43,7 @@ You can also create or delete all containers at once:
 - dotfiles-docker-all-build
 - dotfiles-docker-all-rm
 
-### Containers (with scripts)
+#### Containers (with scripts)
 
 - **latex** - a container with texlive. The following scripts are available:
   - pdflatex
