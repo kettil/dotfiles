@@ -14,7 +14,7 @@ df_install() {
     echo "# macos : copy fonts"
     echo ""
     mkdir -p ~/Library/Fonts
-    cp $DF_HOME/fonts/*.ttf ~/Library/Fonts
+    cp $DF_HOME/files/*.ttf ~/Library/Fonts
 
     # https://wiki.debian.org/Fonts
 }
