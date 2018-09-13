@@ -65,7 +65,7 @@ The following scripts are installed:
 | PDF          | gs, qpdf                                             |
 | Runtimes     | nodejs                                               |
 | Shell        | zsh                                                  |
-| System Tools | f3, nano, tree, unrar, wget, p7zip                   |
+| System Tools | f3, nano, p7zip, tree, unrar, wget                   |
 | Videos       | atomicparsley, ffmpeg, mkvtoolnix, mp4v2, youtube-dl |
 
 #### Scripts
