@@ -2,7 +2,7 @@
 
 My dotfiles library
 
-## install
+## 🎯 Install
 
 ```
 git clone https://github.com/kettil/dotfiles ~/.dotfiles
@@ -14,23 +14,23 @@ The font of the terminal must be Droid+Sans+Mono+Awesome.ttf
 
 All scripts/bin folders are defined in the variable $PATH.
 
-## update
+## 💻 Update
 
 ```
 cd ~/.dotfiles && ./setup.sh update
 ```
 
-## dotfiles
+## ⛄Dotfiles
 
 All static dotfiles are stored in the [./configs](./configs) folder. Via `./setup install` or `./setup update` the files are linked to the home directory. The folder structure of configs is kept in the home directory.
 
-## scripts
+## 👽 Scripts
 
 List of all scripts in [./bin](./bin).
 
 - **sleeps** - sleeps is an extension of **sleep** with a visual representation of the waiting time
 
-## docker
+## 💥 Docker
 
 The container files are in [./docker](./docker) and the associated scripts in [./docker-bin](./docker-bin).
 When a script is called and the container does not exist, it is automatically built.
@@ -49,9 +49,9 @@ You can also create or delete all containers at once:
   - pdflatex
   - xelatex
 
-## brew (macOS only)
+## 👻 Homebrew (macOS only)
 
-[brew](https://brew.sh) is a package manager for macOS.
+[Homebrew](https://brew.sh) is a package manager for macOS.
 
 The following scripts are installed:
 
