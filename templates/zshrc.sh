@@ -72,6 +72,10 @@ source $DOTS/zshrc_oh-my-zsh.sh
 # alias list
 alias ll='ls -lisah'
 
+# load macos alias if it is a mac
+if [ "${OSTYPE:0:6}" = "darwin" ]; then
+    alias ios='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
+fi
 
 if [ -e "$HOME/.zshrc_post.zsh" ]; then
     source $HOME/.zshrc_post.zsh
