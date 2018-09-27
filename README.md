@@ -2,6 +2,8 @@
 
 My dotfiles library
 
+![zsh example](./files/example.jpg)
+
 ## 🎯 Install
 
 ```
