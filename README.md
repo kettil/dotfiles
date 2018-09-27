@@ -30,7 +30,7 @@ All static dotfiles are stored in the [./configs](./configs) folder. Via `./setu
 
 List of all scripts in [./bin](./bin).
 
-- **color-table.sh** - showed a color table in the shell with color codes
+- **color-table.sh** - showed a color table in the shell (with color codes)
 - **sleeps** - sleeps is an extension of **sleep** with a visual representation of the waiting time
 
 ## 💥 Docker
