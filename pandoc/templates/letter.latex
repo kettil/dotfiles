@@ -42,9 +42,9 @@
 % links/ref
 \usepackage[%
   pdftitle={$if(title)$$title$$else$$subject$$endif$},%
-	pdfsubject={$subject$},%
-	pdfauthor={\letterFirstname\ \letterLastname},%
-	pdfkeywords={},%
+  pdfsubject={$subject$},%
+  pdfauthor={\letterFirstname\ \letterLastname},%
+  pdfkeywords={},%
   pdfcreator={pandoc}
 ]{hyperref}
 % header/footer
