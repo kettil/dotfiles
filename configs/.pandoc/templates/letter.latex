@@ -1,0 +1,180 @@
+\documentclass[%
+  fontsize=12pt,
+  parskip=full,
+  version=last%
+]{scrlttr2}
+
+% language
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+% font family
+\usepackage[scaled]{helvet}
+
+% ##############################
+% KOMA options
+\KOMAoptions{%
+  fromlogo=true,
+  locfield=wide,
+  enlargefirstpage,
+  firstfoot=false,
+  fromalign=left,
+  fromrule=false%
+}
+
+% ##############################
+% letter option
+\LoadLetterOption{DIN} % Einstellungen für DIN 676 laden
+\LoadLetterOption{t/absender} % Absenderdaten und -einstellungen aus absender.lco laden
+
+% ##############################
+% pdfLaTeX only
+\usepackage{microtype}
+\usepackage{ellipsis}
+% color
+\usepackage{xcolor}
+% icons
+\usepackage{marvosym}
+% grafics/images
+\usepackage{graphicx}
+% links/ref
+\usepackage[%
+  pdftitle={Titel des Dokuments},%
+	pdfsubject={Eine kurze Beschreibung, worum es geht},%
+	pdfauthor={\letterFirstname\ \letterLastname},%
+	pdfkeywords={},%
+  pdfcreator={pandoc}
+]{hyperref}
+% header/footer
+\usepackage{scrlayer-scrpage}
+% absolute text box (for has)
+\usepackage[absolute]{textpos}
+% counter for pages
+\usepackage{lastpage}
+
+% ##############################
+% links options
+\hypersetup{pdfpagemode=None}
+
+% ##############################
+% defined colors
+\definecolor{colorGrey}{rgb}{0.5,0.5,0.5}
+
+% ##############################
+% create a hash
+\newcommand{\idHash}{
+  \begin{textblock*}{4cm}(.5cm,25cm)%
+    \rotatebox{90}{\tiny\color{colorGrey}\thepage-\pageref*{LastPage}-$hash$}%
+  \end{textblock*}%
+}
+
+% ##############################
+% set KOMA variables
+\newkomavar{frommobile}
+\setkomavar{fromphone}{\letterPhone}
+\setkomavar{frommobile}{\letterMobile}
+\setkomavar{fromemail}{\letterMail}
+\setkomavar{fromname}{\letterFirstname\ \letterLastname}
+\setkomavar{fromaddress}{%
+  \letterStreet\\
+  \letterZip\ \letterCity%
+}
+
+\setkomavar{backaddressseparator}{\ \textbullet\ }
+
+\setkomavar{location}{%
+  \raggedright\footnotesize{%
+  \ \\
+  \vspace{0.27cm}
+  \usekomavar{fromname}\\
+  \usekomavar{fromaddress}\\
+  \bigskip
+  \Telefon\     \usekomavar{fromphone}\\
+  \Mobilefone\  \usekomavar{frommobile}\\
+  \Letter\      \usekomavar{fromemail}\\
+  \bigskip
+  \letterCity, \today}%
+}
+
+% Logo
+%\setkomavar{fromlogo}{\letterLogoImages\hspace*{\letterLogoMargin}}
+
+% Signature
+\setkomavar{signature}{%
+  \letterSignatureImages\\
+  %\vspace{-0.2cm}
+  %{\tiny\color{colorGrey}\usekomavar{fromname}}%
+}
+\renewcommand*{\raggedsignature}{\raggedright}
+
+% ##############################
+% header/footer options
+\pagestyle{scrheadings}
+\clearpairofpagestyles
+% header
+\ihead{\usekomavar{fromname}}
+\ohead{\headmark}
+% footer
+\cfoot{\pagemark}
+\ifoot{\idHash}
+
+% ##############################
+% hash for the first page
+\setkomavar{firsthead}{
+  \begin{flushright}
+    \letterLogoImages\hspace*{\letterLogoMargin}
+  \end{flushright}%
+}
+
+% ##############################
+% set font family
+\renewcommand\familydefault{\sfdefault}
+
+\begin{document}
+% hash id for the first page
+\idHash
+
+% ##############################
+% receiver
+\begin{letter}{%
+  \vspace{-0.75cm}
+  $to_name$\\
+  $to_street$\\
+  \ \\
+  $to_zip$ $to_city$%
+}
+
+% ##############################
+% business line
+\setkomavar{yourref}{$if(your_ref)$$your_ref$$else$$endif$}     % Ihr Zeichen
+\setkomavar{yourmail}{$if(your_mail)$$your_mail$$else$$endif$}  % Ihr Schreiben vom
+\setkomavar{myref}{$if(my_ref)$$my_ref$$else$$endif$}           % Unser Zeichen
+\setkomavar{customer}{$if(customer)$$customer$$else$$endif$}    % Kundennummer
+\setkomavar{invoice}{$if(invoice)$$invoice$$else$$endif$}       % Rechnungsnummer
+\setkomavar{place}{\letterCity}                                 % Ort
+\setkomavar{date}{}
+
+$if(title)$
+% ##############################
+\setkomavar{title}{$title$}
+$endif$
+
+% ##############################
+\setkomavar{subject}{$subject$}
+
+% ##############################
+\opening{$if(salutation)$$salutation$$else$\letterDefaultOpening$endif$,}
+
+$body$
+
+% ##############################
+\closing{$if(greetings)$$greetings$$else$\letterDefaultClosing$endif$}
+
+$if(attachments)$
+% ##############################
+% attachments
+\encl{$for(attachments)$$attachments$\\$endfor$}
+$endif$
+
+% ##############################
+\end{letter}
+\end{document}

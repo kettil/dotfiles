@@ -20,6 +20,6 @@ RUN apt-get -qy update                            \
 
 WORKDIR /data
 
-VOLUME ["/data", "/templates"]
+VOLUME ["/data","/pandoc"]
 
 ENTRYPOINT ["/usr/bin/pandoc"]
