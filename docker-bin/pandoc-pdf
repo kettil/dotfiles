@@ -4,8 +4,13 @@
 $(dirname $0)/../docker/docker-create.sh pandoc
 $(dirname $0)/../docker/docker-create.sh latex
 
+DOCKER_ARGS="--rm -i --user=\"$(id -u):$(id -g)\" --net=none -v \"$PWD\":/data"
+DOCKER_ARGS_PANDOC="--extrypoint \"/pandoc-pdf.sh\" -v \"$(dirname $0)/../pandoc\":/pandoc"
+DOCKER_ARGS_LATEX="--extrypoint \"/usr/bin/pdflatex"\"
+
 # run docker container
-docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data -v "$(dirname $0)/../pandoc":/pandoc dotfiles/pandoc --data-dir=/pandoc --template=letter --to=latex "$@"
+docker run ${DOCKER_ARGS} ${DOCKER_ARGS_PANDOC} dotfiles/pandoc --template=letter "$@"
+#| docker run ${DOCKER_ARGS} ${DOCKER_ARGS_LATEX} dotfiles/latex
 
 # redirects the exit status
 exit $?
