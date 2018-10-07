@@ -9,6 +9,23 @@
 \usepackage[ngerman]{babel}
 % font family
 \usepackage[scaled]{helvet}
+% pdfLaTeX only
+\usepackage{microtype}
+\usepackage{ellipsis}
+% color
+\usepackage{xcolor}
+% icons
+\usepackage{marvosym}
+% grafics/images
+\usepackage{graphicx}
+% links/ref
+\usepackage[pdftex, unicode]{hyperref}
+% header/footer
+\usepackage{scrlayer-scrpage}
+% absolute text box (for has)
+\usepackage[absolute]{textpos}
+% counter for pages
+\usepackage{lastpage}
 
 % ##############################
 % KOMA options
@@ -30,33 +47,15 @@
 \LoadLetterOption{config/sender}
 
 % ##############################
-% pdfLaTeX only
-\usepackage{microtype}
-\usepackage{ellipsis}
-% color
-\usepackage{xcolor}
-% icons
-\usepackage{marvosym}
-% grafics/images
-\usepackage{graphicx}
-% links/ref
-\usepackage[%
+% links options
+\hypersetup{%
+  pdfpagemode=None,
   pdftitle={$if(title)$$title$$else$$subject$$endif$},%
   pdfsubject={$subject$},%
   pdfauthor={\letterFirstname\ \letterLastname},%
   pdfkeywords={},%
   pdfcreator={pandoc}
-]{hyperref}
-% header/footer
-\usepackage{scrlayer-scrpage}
-% absolute text box (for has)
-\usepackage[absolute]{textpos}
-% counter for pages
-\usepackage{lastpage}
-
-% ##############################
-% links options
-\hypersetup{pdfpagemode=None}
+}
 
 % ##############################
 % defined colors
