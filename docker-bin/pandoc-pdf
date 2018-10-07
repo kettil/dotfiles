@@ -5,8 +5,8 @@ $(dirname $0)/../docker/docker-create.sh pandoc
 $(dirname $0)/../docker/docker-create.sh latex
 
 DOCKER_ARGS="--rm -i --user=\"$(id -u):$(id -g)\" --net=none -v \"$PWD\":/data"
-DOCKER_ARGS_PANDOC="--extrypoint \"/pandoc-pdf.sh\" -v \"$(dirname $0)/../pandoc\":/pandoc"
-DOCKER_ARGS_LATEX="--extrypoint \"/usr/bin/pdflatex"\"
+DOCKER_ARGS_PANDOC="--entrypoint \"/pandoc-pdf.sh\" -v \"$(dirname $0)/../pandoc\":/pandoc"
+DOCKER_ARGS_LATEX="--entrypoint \"/usr/bin/pdflatex"\"
 
 # run docker container
 docker run ${DOCKER_ARGS} ${DOCKER_ARGS_PANDOC} dotfiles/pandoc --template=letter "$@"
