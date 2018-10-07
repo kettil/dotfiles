@@ -4,7 +4,7 @@
 $(dirname $0)/../docker/docker-create.sh pandoc
 
 # run docker container
-docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data -v "~/.pandoc":/pandoc dotfiles/pandoc --data-dir=/pandoc "$@"
+docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data -v ~/.pandoc:/pandoc dotfiles/pandoc --data-dir=/pandoc "$@"
 
 # redirects the exit status
 exit $?

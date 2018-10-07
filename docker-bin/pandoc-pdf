@@ -5,7 +5,7 @@ $(dirname $0)/../docker/docker-create.sh pandoc
 $(dirname $0)/../docker/docker-create.sh latex
 
 # run docker container
-docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data -v "~/.pandoc":/pandoc dotfiles/pandoc --data-dir=/pandoc --template=letter --to=latex "$@"
+docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data -v ~/.pandoc:/pandoc dotfiles/pandoc --data-dir=/pandoc --template=letter --to=latex "$@"
 
 # redirects the exit status
 exit $?
