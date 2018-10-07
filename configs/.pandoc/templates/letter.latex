@@ -23,8 +23,11 @@
 
 % ##############################
 % letter option
-\LoadLetterOption{DIN} % Einstellungen für DIN 676 laden
-\LoadLetterOption{t/absender} % Absenderdaten und -einstellungen aus absender.lco laden
+%
+% load settings for DIN 676
+\LoadLetterOption{DIN}
+% load settingsfrom senders
+\LoadLetterOption{config/sender}
 
 % ##############################
 % pdfLaTeX only
@@ -38,8 +41,8 @@
 \usepackage{graphicx}
 % links/ref
 \usepackage[%
-  pdftitle={Titel des Dokuments},%
-	pdfsubject={Eine kurze Beschreibung, worum es geht},%
+  pdftitle={$if(title)$$title$$else$$subject$$endif$},%
+	pdfsubject={$subject$},%
 	pdfauthor={\letterFirstname\ \letterLastname},%
 	pdfkeywords={},%
   pdfcreator={pandoc}
