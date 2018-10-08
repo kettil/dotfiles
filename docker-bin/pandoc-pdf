@@ -16,7 +16,7 @@ cd "$(dirname ${PANDOC_SOURCE})"
 
 PANDOC_FILE="$(basename ${PANDOC_SOURCE})"
 PANDOC_NAME="$(echo ${PANDOC_FILE} | rev | cut -f 2- -d '.' | rev)"
-PANDOC_TMP="./._tmp_${PANDOC_NAME}"
+PANDOC_TMP=".tmp_${PANDOC_NAME}"
 
 # create a tmp folder
 mkdir -p "${PANDOC_TMP}"
