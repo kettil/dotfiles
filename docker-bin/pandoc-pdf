@@ -4,13 +4,67 @@
 $(dirname $0)/../docker/docker-create.sh pandoc
 $(dirname $0)/../docker/docker-create.sh latex
 
-DOCKER_ARGS="--rm -i --user=\"$(id -u):$(id -g)\" --net=none -v \"$PWD\":/data"
-DOCKER_ARGS_PANDOC="--entrypoint \"/pandoc-pdf.sh\" -v \"$(dirname $0)/../pandoc\":/pandoc"
-DOCKER_ARGS_LATEX="--entrypoint \"/usr/bin/pdflatex"\"
+PANDOC_SOURCE="${1}"
 
-# run docker container
-docker run ${DOCKER_ARGS} ${DOCKER_ARGS_PANDOC} dotfiles/pandoc --template=letter "$@"
-#| docker run ${DOCKER_ARGS} ${DOCKER_ARGS_LATEX} dotfiles/latex
+if [ ! -f "${PANDOC_SOURCE}" ]; then
+  echo "File '${PANDOC_SOURCE}' do not exists"
+  exit -1
+fi
+
+# switch to file folder
+cd "$(dirname ${PANDOC_SOURCE})"
+
+PANDOC_FILE="$(basename ${PANDOC_SOURCE})"
+PANDOC_NAME="$(echo ${PANDOC_FILE} | rev | cut -f 2- -d '.' | rev)"
+PANDOC_TMP="./._tmp_${PANDOC_NAME}"
+
+# create a tmp folder
+mkdir -p "${PANDOC_TMP}"
+
+# run pandoc docker container
+docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "${PWD}":/data \
+  --entrypoint "/pandoc-pdf.sh" -v "$(dirname ${0})/../pandoc":/pandoc     \
+  dotfiles/pandoc --template=letter --output="${PANDOC_TMP}/${PANDOC_NAME}.tex" "${PANDOC_FILE}"
+
+PANDOC_EXIT=$?
+if [ $PANDOC_EXIT -ne 0 ]; then
+  echo "pandoc failed (0)"
+  # remove tmp folder
+  rm -rf "${PANDOC_TMP}"
+  # redirects the exit status
+  exit $PANDOC_EXIT
+fi
+
+# run latex docker container (first run)
+docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data \
+  dotfiles/latex -output-directory="${PANDOC_TMP}" "${PANDOC_TMP}/${PANDOC_NAME}.tex"
+
+PANDOC_EXIT=$?
+if [ $PANDOC_EXIT -ne 0 ]; then
+  echo "latex failed (1)"
+  # remove tmp folder
+  rm -rf "${PANDOC_TMP}"
+  # redirects the exit status
+  exit $PANDOC_EXIT
+fi
+
+# run latex docker container (second run)
+docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data \
+  dotfiles/latex -output-directory="${PANDOC_TMP}" "${PANDOC_TMP}/${PANDOC_NAME}.tex"
+
+PANDOC_EXIT=$?
+if [ $PANDOC_EXIT -ne 0 ]; then
+  echo "latex failed (2)"
+  # remove tmp folder
+  rm -rf "${PANDOC_TMP}"
+  # redirects the exit status
+  exit $PANDOC_EXIT
+fi
+
+# move file
+mv "${PANDOC_TMP}/${PANDOC_NAME}.pdf" ./
+# remove tmp folder
+rm -rf "${PANDOC_TMP}"
 
 # redirects the exit status
-exit $?
+exit 0
