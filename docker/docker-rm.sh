@@ -28,7 +28,7 @@ if [ "$DF_FOLDER" == "" ] || [ ! -e "$DF_FOLDER" ]; then
 fi
 
 # remove docker container
-docker image rm dotfiles/${DF_FOLDER}
+docker image rm -f dotfiles/${DF_FOLDER}
 
 # redirects the exit status
 exit $?
