@@ -29,7 +29,7 @@ fi
 
 # remove old docker container, if exists
 if [ $(docker image ls | grep "dotfiles/${DF_FOLDER}" | wc -l) -gt 0 ]; then
-    docker image rm dotfiles/${DF_FOLDER}
+    docker image rm -f dotfiles/${DF_FOLDER}
 fi
 
 # build docker container
