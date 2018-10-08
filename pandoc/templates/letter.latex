@@ -32,6 +32,7 @@
 \KOMAoptions{%
   fromlogo=true,
   locfield=wide,
+  refline=nodate,
   enlargefirstpage,
   firstfoot=false,
   fromalign=left,
