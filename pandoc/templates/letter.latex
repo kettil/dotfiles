@@ -44,7 +44,7 @@
 % load settings for DIN 676
 \LoadLetterOption{DIN}
 % load settingsfrom senders
-\LoadLetterOption{config/sender}
+\LoadLetterOption{config/$if(config)$$config$$else$sender$endif$}
 
 % ##############################
 % links options
