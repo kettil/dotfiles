@@ -33,6 +33,8 @@ if [ $(docker image ls | grep "dotfiles/${DF_FOLDER}" | wc -l) -gt 0 ]; then
 fi
 
 # build docker container
+echo "create the container dotfiles/${DF_FOLDER}"
+echo ""
 docker image build -t dotfiles/${DF_FOLDER} "$DF_FOLDER"
 
 # redirects the exit status
