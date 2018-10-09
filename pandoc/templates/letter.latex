@@ -45,7 +45,7 @@
 % load settings for DIN 676
 \LoadLetterOption{DIN}
 % load settingsfrom senders
-\LoadLetterOption{config/$if(config)$$config$$else$sender$endif$}
+\LoadLetterOption{config/$if(config)$$config$$else$default$endif$}
 
 % ##############################
 % links options
@@ -154,7 +154,7 @@
 \setkomavar{customer}{$if(customer)$$customer$$else$$endif$}    % Kundennummer
 \setkomavar{invoice}{$if(invoice)$$invoice$$else$$endif$}       % Rechnungsnummer
 \setkomavar{place}{\letterCity}                                 % Ort
-\setkomavar{date}{}
+\setkomavar{date}{\today}
 
 $if(title)$
 % ##############################
