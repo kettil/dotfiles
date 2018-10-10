@@ -1,0 +1,25 @@
+\ProvidesFile{default.lco}
+
+% name and address
+\newcommand{\letterFirstname}{Firstname}
+\newcommand{\letterLastname}{Lastname}
+\newcommand{\letterStreet}{Street}
+\newcommand{\letterZip}{12345}
+\newcommand{\letterCity}{City}
+
+% contact data
+\newcommand{\letterPhone}{+49 30 ...}
+\newcommand{\letterMobile}{+49 171 ...}
+\newcommand{\letterMail}{mail@example.com}
+
+% logo
+\newcommand{\letterLogoImages}{\includegraphics[height=2.75cm]{config/logo.png}}
+\newcommand{\letterLogoMargin}{1.5cm}
+
+% signature
+\newcommand{\letterSignatureImages}{\includegraphics[height=1.5cm]{config/signature.png}}
+\@setplength{sigbeforevskip}{5pt}
+
+% default text
+\newcommand{\letterDefaultOpening}{Dear Ladies and Gentlemen}
+\newcommand{\letterDefaultClosing}{Best regards}
