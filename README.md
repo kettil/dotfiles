@@ -50,9 +50,20 @@ You can also create or delete all containers at once:
 
 #### Containers (with scripts)
 
-- **latex** - a container with texlive. The following scripts are available:
+- **LaTeX** - a container with texlive.
   - pdflatex
   - xelatex
+- **Pandoc** - a container with pandox.
+  - pandoc
+  - pandoc-pdf (uses the LaTeX container)
+
+#### Script: pandoc-pdf
+
+Create a german DIN 676 letter from a markdown file.
+The LaTeX template for the letter is located at [pandoc/templates/letter.latex](pandoc/templates/letter.latex).
+
+In folder [example/pandoc-pdf](example/pandoc-pdf) is an example.
+The script `pandoc-pdf letter.md` must be called in this folder.
 
 ## 👻 Homebrew (macOS only)
 
