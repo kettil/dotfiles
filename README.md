@@ -9,6 +9,9 @@ My dotfiles library
 ```
 git clone https://github.com/kettil/dotfiles ~/.dotfiles
 
+# on mac
+xcode-select --install
+
 cd ~/.dotfiles && ./setup.sh install
 ```
 
