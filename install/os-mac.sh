@@ -18,7 +18,7 @@ df_install() {
 }
 
 if [ "${OSTYPE:0:6}" != "darwin" ]; then
-    exit
+    return
 fi
 
 if [ "${DF_HOME}" == "" ]; then
