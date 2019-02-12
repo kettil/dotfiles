@@ -26,7 +26,7 @@ df_install() {
 }
 
 if [ ! -f /etc/debian_version ]; then
-    exit
+    return
 fi
 
 if [ "${DF_HOME}" == "" ]; then
