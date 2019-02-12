@@ -51,7 +51,7 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 # Visual customisation of the second prompt line
 local user_symbol="$ "
 if [[ $(print -P "%#") =~ "#" ]]; then
-    user_symbol = "# "
+    user_symbol="# "
 fi
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%f"
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{253}%K{234}%} $user_symbol%{%b%f%k%F{234}%} %{%f%}"
