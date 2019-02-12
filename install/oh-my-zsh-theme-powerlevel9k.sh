@@ -40,9 +40,9 @@ if [ "${DF_GITS}" == "" ]; then
 fi
 
 if [ "$(whoami)" != "$(stat -c %U "${DF_HOME}")" ]; then
-    echo ""
     echo "####################"
     echo "# oh-my-zsh : theme : installation is skipped"
+    echo ""
     return
 fi
 
