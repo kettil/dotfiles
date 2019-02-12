@@ -41,7 +41,7 @@ fi
 
 if [ "$(whoami)" != "$(stat -c %U "${DF_HOME}")" ]; then
     echo "####################"
-    echo "# oh-my-zsh : theme : installation is skipped"
+    echo "# oh-my-zsh : theme : installation is skipped - wrong owner/user"
     echo ""
     return
 fi
