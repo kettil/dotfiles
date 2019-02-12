@@ -13,6 +13,8 @@ df_run() {
   cd "${DF_HOME}"
   source ./install/os-mac.sh "${1}"
   cd "${DF_HOME}"
+  source ./install/os-debian.sh "${1}"
+  cd "${DF_HOME}"
   source ./install/brew.sh "${1}"
   cd "${DF_HOME}"
   source ./install/docker.sh "${1}"
