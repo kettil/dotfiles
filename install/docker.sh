@@ -20,7 +20,7 @@ df_install() {
 }
 
 if [ "$(which docker | cut -d" " -f1)" == "" ]; then
-    exit
+    return
 fi
 
 if [ "${DF_HOME}" == "" ]; then
