@@ -29,9 +29,21 @@ df_update() {
     git pull --rebase --stat origin master
 }
 
+if [ "${DF_HOME}" == "" ]; then
+    echo '$DF_HOME is not defined'
+    exit
+fi
+
 if [ "${DF_GITS}" == "" ]; then
     echo '$DF_GITS is not defined'
     exit
+fi
+
+if [ "$(whoami)" != "$(stat -c %U "${DF_HOME}")" ]; then
+    echo ""
+    echo "####################"
+    echo "# oh-my-zsh : theme : installation is skipped"
+    return
 fi
 
 case "$1" in
