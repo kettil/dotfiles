@@ -3,11 +3,16 @@
 DF_FILE="zshrc"
 
 df_install() {
-    echo "####################"
-    echo "# zshrc : change config"
-    cat "${DF_HOME}/templates/zshrc.sh"                     \
-        | sed "s|^export DOTS=.*$|export DOTS=${DF_HOME}|"  \
-        > "${DF_HOME}/zshrc.sh"
+    if [ "$(whoami)" == "$(stat -c %U "${DF_HOME}")" ]; then
+        echo "####################"
+        echo "# zshrc : change config"
+        cat "${DF_HOME}/templates/zshrc.sh"                     \
+            | sed "s|^export DOTS=.*$|export DOTS=${DF_HOME}|"  \
+            > "${DF_HOME}/zshrc.sh"
+    else
+        echo "####################"
+        echo "# zshrc : change config is skipped - wrong owner/user"
+    fi
 
     echo ""
     echo "####################"
