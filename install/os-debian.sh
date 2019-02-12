@@ -1,19 +1,26 @@
 #!/bin/bash
 
 df_install() {
-    echo ""
-    echo "####################"
-    echo "# debian : update"
-    sudo apt-get update
+    if [ "$(id)" == "uid=0(root) gid=0(root) groups=0(root)" ]; then
+        echo ""
+        echo "####################"
+        echo "# debian : update"
+        sudo apt-get update
 
-    echo ""
-    echo "####################"
-    echo "# debian : install"
-    sudo apt-get install -y zsh
-    # monitoring
-    sudo apt-get install -y htop iftop
-    # system tools
-    sudo apt-get install -y nano git tree wget
+        echo ""
+        echo "####################"
+        echo "# debian : install"
+        sudo apt-get install -y zsh
+        # monitoring
+        sudo apt-get install -y htop iftop
+        # system tools
+        sudo apt-get install -y nano git tree wget
+    else
+        echo ""
+        echo "# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+        echo "# !! You do not have root privileges !!"
+        echo "# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    fi
 
     echo ""
     echo "####################"
