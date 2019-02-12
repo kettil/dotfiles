@@ -57,7 +57,7 @@ df_update() {
 }
 
 if [ "${OSTYPE:0:6}" != "darwin" ]; then
-    exit
+    return
 fi
 
 if [ ! -e /usr/local/bin/brew ]; then
