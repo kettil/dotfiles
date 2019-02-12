@@ -41,7 +41,7 @@ fi
 
 if [ "$(whoami)" != "$(stat -c %U "${DF_HOME}")" ]; then
     echo "####################"
-    echo "# oh-my-zsh : plugin : installation is skipped - wrong owner/user"
+    echo "# oh-my-zsh : plugin : installation is skipped - wrong owner/user (${DF_NAME})"
     echo ""
     return
 fi
