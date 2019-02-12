@@ -22,14 +22,14 @@ df_install() {
         echo "# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     fi
 
-    echo ""
-    echo "####################"
-    echo "# debian : copy fonts"
-    echo ""
-    mkdir -p ~/.local/share/fonts
-    ln -sf ~/.local/share/fonts ~/.fonts
-    cp $DF_HOME/files/*.ttf ~/.fonts
-    chmod -R 644 ~/.fonts/*
+    #echo ""
+    #echo "####################"
+    #echo "# debian : copy fonts"
+    #echo ""
+    #mkdir -p ~/.local/share/fonts
+    #ln -sf ~/.local/share/fonts ~/.fonts
+    #cp $DF_HOME/files/*.ttf ~/.fonts
+    #chmod -R 644 ~/.fonts/*
 }
 
 if [ ! -f /etc/debian_version ]; then
