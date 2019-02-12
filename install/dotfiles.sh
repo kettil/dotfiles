@@ -26,6 +26,7 @@ if [ "$(whoami)" != "$(stat -c %U "${DF_HOME}")" ]; then
     echo ""
     return
 fi
+
 case "$1" in
     install)
       df_install
