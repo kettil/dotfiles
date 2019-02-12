@@ -4,7 +4,7 @@ df_install() {
 
 }
 
-if [ "${OSTYPE:0:6}" != "debian" ]; then
+if [ ! -f /etc/debian_version ]; then
     exit
 fi
 
