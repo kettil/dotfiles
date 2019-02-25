@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# checks if the image exists, if not, it is created
+$(dirname $0)/../docker/docker-create.sh hadolint
+
+# run docker container
+docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data dotfiles/hadolint "$@"
+
+# redirects the exit status
+exit $?
