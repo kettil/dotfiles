@@ -28,12 +28,10 @@ if [ "${DF_HOME}" == "" ]; then
     exit
 fi
 
-if [ "$(whoami)" != "$(ls -ld "${DF_HOME}" | awk "{print $3}")" ]; then
-    echo "####################"
-    echo "# docker-scripts : installation is skipped - wrong owner/user"
-    echo ""
+if [ "$(whoami)" != "$(ls -ld "${DF_HOME}" | awk '{print $3}')" ]; then
     return
 fi
+
 case "$1" in
     install)
         df_install
