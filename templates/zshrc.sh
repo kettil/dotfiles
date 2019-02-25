@@ -12,11 +12,21 @@ plugins=(git npm zsh-autosuggestions zsh-syntax-highlighting)
 # added special docker scripts, if docker is installed
 if [ "$(which docker | cut -d" " -f1)" != "" ]; then
     plugins+=(docker)
+
+    # add docker-bin to $path variable
     export PATH=$DOTS/docker-bin:$PATH
 
     if [ "$(which docker-compose | cut -d" " -f1)" != "" ]; then
         plugins+=(docker-compose)
     fi
+fi
+
+# added special kubernetes scripts, if kubernetes is installed
+if [ "$(which kubectl | cut -d" " -f1)" != "" ]; then
+    plugins+=(kubectl)
+
+    # change kubernetes standard editor
+    export KUBE_EDITOR="nano"
 fi
 
 # homebrew settings
