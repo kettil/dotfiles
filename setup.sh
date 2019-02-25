@@ -19,6 +19,8 @@ df_run() {
   cd "${DF_HOME}"
   source ./install/docker.sh "${1}"
   cd "${DF_HOME}"
+  source ./install/kubernetes.sh "${1}"
+  cd "${DF_HOME}"
   source ./install/zshrc.sh "${1}"
   cd "${DF_HOME}"
   source ./install/oh-my-zsh.sh "${1}"
