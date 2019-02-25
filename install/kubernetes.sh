@@ -12,7 +12,7 @@ df_install() {
 
     echo ""
     echo "####################"
-    echo "# kubernetes : kubectx : "
+    echo "# kubernetes : kubectx : executable"
     chmod 755 "${DF_GITS}/kubectx/kubectx"
     chmod 755 "${DF_GITS}/kubectx/kubens"
 
