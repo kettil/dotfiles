@@ -2,6 +2,7 @@ FROM debian:stretch
 
 LABEL maintainer="Kjell Dießel <development@kettil.de>"
 
+# https://github.com/jgm/pandoc
 ENV PANDOC_VERSION 2.3.1
 ENV PANDOC_URL https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-1-amd64.deb
 ENV PANDOC_FILE pandoc-${PANDOC_VERSION}.deb
