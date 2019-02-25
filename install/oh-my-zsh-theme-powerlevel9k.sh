@@ -39,10 +39,7 @@ if [ "${DF_GITS}" == "" ]; then
     exit
 fi
 
-if [ "$(whoami)" != "$(ls -ld "${DF_HOME}" | awk "{print $3}")" ]; then
-    echo "####################"
-    echo "# oh-my-zsh : theme : installation is skipped - wrong owner/user"
-    echo ""
+if [ "$(whoami)" != "$(ls -ld "${DF_HOME}" | awk '{print $3}')" ]; then
     return
 fi
 
