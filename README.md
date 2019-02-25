@@ -17,7 +17,7 @@ cd ~/.dotfiles && ./setup.sh install
 
 The font of the terminal must be Droid+Sans+Mono+Awesome.ttf
 
-All scripts/bin folders are defined in the variable $PATH.
+All scripts/bin folders are defined in the variable \$PATH.
 
 ## 💻 Update
 
