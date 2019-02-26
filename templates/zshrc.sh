@@ -31,8 +31,6 @@ fi
 
 # homebrew settings
 if [ -e /usr/local/bin/brew ]; then
-    # plugins is deprecated
-    #plugins+=(brew)
     export PATH=$DOTS/brew-bin:$PATH
     # disabled homebrew analytics mode
     export HOMEBREW_NO_ANALYTICS=1
@@ -189,6 +187,13 @@ alias ll='ls -lisah'
 # load macos alias if it is a mac
 if [ "${OSTYPE:0:6}" = "darwin" ]; then
     alias ios='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
+fi
+
+# added special kubernetes scripts, if kubernetes is installed
+if [ "$(which kubectl | cut -d" " -f1)" != "" ]; then
+    # completions
+    source "${DOTS}/gits/kubectx/completion/kubectx.bash"
+    source "${DOTS}/gits/kubectx/completion/kubens.bash"
 fi
 
 if [ -e "$HOME/.zshrc_post.zsh" ]; then
