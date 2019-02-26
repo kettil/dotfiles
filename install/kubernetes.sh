@@ -22,10 +22,6 @@ df_install() {
     # scripte
     ln -sf "${DF_GITS}/kubectx/kubectx" "${DF_HOME}/bin/kubectx"
     ln -sf "${DF_GITS}/kubectx/kubens" "${DF_HOME}/bin/kubens"
-    # completions
-    mkdir -p "${DF_GITS}/oh-my-zsh/completions"
-    ln -sf "${DF_GITS}/kubectx/completion/kubectx.zsh" "${DF_GITS}/oh-my-zsh/completions/kubectx.zsh"
-    ln -sf "${DF_GITS}/kubectx/completion/kubens.zsh" "${DF_GITS}/oh-my-zsh/completions/kubens.zsh"
 }
 
 if [ "$(which kubectl | cut -d" " -f1)" == "" ]; then
