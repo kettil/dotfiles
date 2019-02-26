@@ -206,7 +206,11 @@ if [ "$(which kubectl | cut -d" " -f1)" != "" ]; then
     }
 
     compdef _comdefKubens kubens kns=kubens
-    compdef _comdefKubectx kubectx kctx=kubectx
+    compdef _comdefKubectx kubectx ktx=kubectx
+    
+    # alias
+    alias kns='kubens'
+    alias ktx='kubectx'
 fi
 
 if [ -e "$HOME/.zshrc_post.zsh" ]; then
