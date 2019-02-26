@@ -29,6 +29,11 @@ if [ "$(which kubectl | cut -d" " -f1)" != "" ]; then
     export KUBE_EDITOR="nano"
 fi
 
+# added special helm (kubernetes) scripts, if helm is installed
+if [ "$(which helm | cut -d" " -f1)" != "" ]; then
+    plugins+=(helm)
+fi
+
 # homebrew settings
 if [ -e /usr/local/bin/brew ]; then
     export PATH=$DOTS/brew-bin:$PATH
