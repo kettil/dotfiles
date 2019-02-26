@@ -53,6 +53,8 @@ You can also create or delete all containers at once:
 
 #### Containers (with scripts)
 
+- **hadolint** - a Dockerfile linter
+  - hadolint
 - **LaTeX** - a container with texlive.
   - pdflatex
   - xelatex
