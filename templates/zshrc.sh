@@ -191,9 +191,17 @@ fi
 
 # added special kubernetes scripts, if kubernetes is installed
 if [ "$(which kubectl | cut -d" " -f1)" != "" ]; then
-    # completions
-    source "${DOTS}/gits/kubectx/completion/kubectx.bash"
-    source "${DOTS}/gits/kubectx/completion/kubens.bash"
+    # source: https://github.com/ahmetb/kubectx
+    _comdefKubens () {
+        _arguments "1: :($(kubectl get namespaces -o=jsonpath='{range .items[*].metadata.name}{@}{"\n"}{end}'))"
+    }
+
+    _comdefKubectx () {
+        _arguments "1: :($(kubectl config get-contexts --output='name'))"
+    }
+
+    compdef _comdefKubens kubens kns=kubens
+    compdef _comdefKubectx kubectx kctx=kubectx
 fi
 
 if [ -e "$HOME/.zshrc_post.zsh" ]; then
