@@ -192,6 +192,11 @@ alias ll='ls -lisah'
 # load macos alias if it is a mac
 if [ "${OSTYPE:0:6}" = "darwin" ]; then
     alias ios='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
+
+    if [ -e "/Applications/Visual Studio Code.app" ]; then
+        # Add Visual Studio Code (code)
+        alias code="/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"
+    fi
 fi
 
 # added special kubernetes scripts, if kubernetes is installed
@@ -207,7 +212,7 @@ if [ "$(which kubectl | cut -d" " -f1)" != "" ]; then
 
     compdef _comdefKubens kubens kns=kubens
     compdef _comdefKubectx kubectx ktx=kubectx
-    
+
     # alias
     alias kns='kubens'
     alias ktx='kubectx'
