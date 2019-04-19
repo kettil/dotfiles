@@ -195,7 +195,7 @@ if [ "${OSTYPE:0:6}" = "darwin" ]; then
 
     if [ -e "/Applications/Visual Studio Code.app" ]; then
         # Add Visual Studio Code (code)
-        alias code="/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"
+        alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
     fi
 fi
 
