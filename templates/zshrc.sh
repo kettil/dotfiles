@@ -188,6 +188,7 @@ source $DOTS/zshrc_oh-my-zsh.sh
 
 # alias list
 alias ll='ls -lisah'
+alias tree='/usr/local/bin/tree -C'
 
 # load macos alias if it is a mac
 if [ "${OSTYPE:0:6}" = "darwin" ]; then
