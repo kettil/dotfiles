@@ -23,7 +23,7 @@ mkdir -p "${PANDOC_TMP}"
 
 # run pandoc docker container
 docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "${PWD}":/data \
-  --entrypoint "/pandoc-pdf.sh" -v "$(dirname ${0})/../pandoc":/pandoc     \
+  --entrypoint "/pandoc-letter.sh" -v "$(dirname ${0})/../pandoc":/pandoc     \
   dotfiles/pandoc --template=letter --output="${PANDOC_TMP}/${PANDOC_NAME}.tex" "${PANDOC_FILE}"
 
 PANDOC_EXIT=$?
