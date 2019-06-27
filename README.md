@@ -61,14 +61,20 @@ You can also create or delete all containers at once:
 - **Pandoc** - a container with pandox.
   - pandoc
   - pandoc-pdf (uses the LaTeX container)
+  - pandoc-letter (uses the LaTeX container)
 
-#### Script: pandoc-pdf
+#### Script: pandoc-letter
 
 Create a german DIN 676 letter from a markdown file.
 The LaTeX template for the letter is located at [pandoc/templates/letter.latex](pandoc/templates/letter.latex).
 
 In folder [example/pandoc-pdf](example/pandoc-pdf) is an example.
-The script `pandoc-pdf letter.md` must be called in this folder.
+The script `pandoc-letter letter.md` must be called in this folder.
+
+#### Script: pandoc-pdf
+
+Converts a Markdown file to a PDF file.
+The template [Eisvogel](https://github.com/Wandmalfarbe/pandoc-latex-template) is used.
 
 ## 👻 Homebrew (macOS only)
 
