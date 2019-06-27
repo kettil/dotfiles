@@ -6,7 +6,7 @@ My dotfiles library
 
 ## 🎯 Install
 
-```
+```bash
 git clone https://github.com/kettil/dotfiles ~/.dotfiles
 
 # on mac
@@ -21,7 +21,7 @@ All scripts/bin folders are defined in the variable \$PATH.
 
 ## 💻 Update
 
-```
+```bash
 cd ~/.dotfiles && ./setup.sh update
 ```
 
@@ -58,7 +58,7 @@ You can also create or delete all containers at once:
 - **LaTeX** - a container with texlive.
   - pdflatex
   - xelatex
-- **Pandoc** - a container with pandox.
+- **Pandoc** - a container with pandoc.
   - pandoc
   - pandoc-pdf (uses the LaTeX container)
   - pandoc-letter (uses the LaTeX container)
