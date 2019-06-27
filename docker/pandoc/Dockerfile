@@ -20,8 +20,9 @@ RUN apt-get -qy update                              \
   && apt-get -qy clean                              \
   && rm -rf /var/lib/apt/lists/*
 
-COPY pandoc.sh     /pandoc.sh
-COPY pandoc-pdf.sh /pandoc-pdf.sh
+COPY pandoc.sh        /pandoc.sh
+COPY pandoc-letter.sh /pandoc-letter.sh
+COPY pandoc-pdf.sh    /pandoc-pdf.sh
 
 WORKDIR /data
 
