@@ -26,6 +26,7 @@ df_install() {
     df_install_brew nano git tree wget unrar p7zip gnupg
     # runtimes
     df_install_brew node
+    df_install_cask postman
     # videos
     df_install_brew ffmpeg mkvtoolnix mp4v2 youtube-dl atomicparsley
     # pdf
