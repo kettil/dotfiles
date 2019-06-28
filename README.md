@@ -88,7 +88,7 @@ The following scripts are installed:
 | Monitoring   | htop, iftop                                          |
 | Networking   | fping, nmap, speedtest-cli                           |
 | PDF          | gs, qpdf                                             |
-| Runtimes     | nodejs                                               |
+| Runtimes     | nodejs, postman                                      |
 | Shell        | zsh                                                  |
 | System Tools | f3, git, nano, p7zip, tree, unrar, wget, gnupg       |
 | Videos       | atomicparsley, ffmpeg, mkvtoolnix, mp4v2, youtube-dl |
