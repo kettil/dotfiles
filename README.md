@@ -86,9 +86,9 @@ The following scripts are installed:
 | ------------ | ---------------------------------------------------- |
 | Fuse         | osxfuse, sshfs                                       |
 | Monitoring   | htop, iftop                                          |
-| Networking   | fping, nmap, speedtest-cli                           |
+| Networking   | fping, nmap, speedtest-cli, postman                  |
 | PDF          | gs, qpdf                                             |
-| Runtimes     | nodejs, postman                                      |
+| Runtimes     | nodejs                                               |
 | Shell        | zsh                                                  |
 | System Tools | f3, git, nano, p7zip, tree, unrar, wget, gnupg       |
 | Videos       | atomicparsley, ffmpeg, mkvtoolnix, mp4v2, youtube-dl |
