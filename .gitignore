@@ -10,3 +10,7 @@
 # special docker files
 /docker-bin/dotfiles-docker-build-*
 /docker-bin/dotfiles-docker-rm-*
+
+# files from gits folder
+/bin/kubectx
+/bin/kubens
