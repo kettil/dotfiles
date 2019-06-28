@@ -20,13 +20,13 @@ df_install() {
     df_install_brew sshfs
     # networking
     df_install_brew nmap fping speedtest-cli
+    df_install_cask postman
     # monitoring
     df_install_brew htop iftop
     # system tools
     df_install_brew nano git tree wget unrar p7zip gnupg
     # runtimes
     df_install_brew node
-    df_install_cask postman
     # videos
     df_install_brew ffmpeg mkvtoolnix mp4v2 youtube-dl atomicparsley
     # pdf
