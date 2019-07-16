@@ -23,7 +23,7 @@ const argsDocument = {
     type: 'boolean'
   },
   pageRanges: {
-    describe: 'Paper ranges to print, e.g., '1-5, 8, 11-13'',
+    describe: 'Paper ranges to print, e.g., "1-5, 8, 11-13"',
     type: 'string'
   },
   pageFormat: {
