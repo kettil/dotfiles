@@ -187,8 +187,12 @@ fi
 source $DOTS/zshrc_oh-my-zsh.sh
 
 # alias list
-alias ll='ls -lisah'
-alias tree='/usr/local/bin/tree -C'
+alias ll='/bin/ls -lisah'
+
+if [ -e /usr/local/bin/brew ]; then
+    alias tree='/usr/local/bin/tree -C'
+    alias server='/usr/local/bin/docker run --rm -v $PWD:/usr/share/nginx/html:ro -p 8080:80 nginx'
+fi
 
 # load macos alias if it is a mac
 if [ "${OSTYPE:0:6}" = "darwin" ]; then
