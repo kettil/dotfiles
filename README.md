@@ -51,7 +51,7 @@ You can also create or delete all containers at once:
 - dotfiles-docker-all-build
 - dotfiles-docker-all-rm
 
-#### Containers (with scripts)
+### Containers (with scripts)
 
 - **hadolint** - a Dockerfile linter
   - hadolint
@@ -63,7 +63,7 @@ You can also create or delete all containers at once:
   - pandoc-pdf (uses the LaTeX container)
   - pandoc-letter (uses the LaTeX container)
 
-#### Script: pandoc-letter
+### Script: pandoc-letter
 
 Create a german DIN 676 letter from a markdown file.
 The LaTeX template for the letter is located at [pandoc/templates/letter.latex](pandoc/templates/letter.latex).
@@ -71,7 +71,7 @@ The LaTeX template for the letter is located at [pandoc/templates/letter.latex](
 In folder [example/pandoc-pdf](example/pandoc-pdf) is an example.
 The script `pandoc-letter letter.md` must be called in this folder.
 
-#### Script: pandoc-pdf
+### Script: pandoc-pdf
 
 Converts a Markdown file to a PDF file.
 The template [Eisvogel](https://github.com/Wandmalfarbe/pandoc-latex-template) is used.
@@ -82,18 +82,18 @@ The template [Eisvogel](https://github.com/Wandmalfarbe/pandoc-latex-template) i
 
 The following scripts are installed:
 
-| Category     | Packages                                             |
-| ------------ | ---------------------------------------------------- |
-| Fuse         | osxfuse, sshfs                                       |
-| Monitoring   | htop, iftop                                          |
-| Networking   | fping, nmap, speedtest-cli, postman                  |
-| PDF          | gs, qpdf                                             |
-| Runtimes     | nodejs                                               |
-| Shell        | zsh                                                  |
-| System Tools | f3, git, nano, p7zip, tree, unrar, wget, gnupg, jq   |
-| Videos       | atomicparsley, ffmpeg, mkvtoolnix, mp4v2, youtube-dl |
+| Category     | Packages                                                         |
+| ------------ | ---------------------------------------------------------------- |
+| Fuse         | osxfuse, sshfs                                                   |
+| Monitoring   | htop, iftop                                                      |
+| Networking   | fping, nmap, speedtest-cli, postman                              |
+| PDF          | gs, qpdf                                                         |
+| Runtimes     | nodejs                                                           |
+| Shell        | zsh                                                              |
+| System Tools | f3, git, nano, p7zip, tree, unrar, wget, gnupg, jq, fzf, fd, bat |
+| Videos       | atomicparsley, ffmpeg, mkvtoolnix, mp4v2, youtube-dl             |
 
-#### Scripts
+### Scripts
 
 List of all scripts in [./brew-bin](./brew-bin).
 

@@ -24,7 +24,7 @@ df_install() {
     # monitoring
     df_install_brew htop iftop
     # system tools
-    df_install_brew nano git tree wget unrar p7zip gnupg jq
+    df_install_brew nano git tree wget unrar p7zip gnupg jq fzf fd bat
     # runtimes
     df_install_brew node
     # videos
