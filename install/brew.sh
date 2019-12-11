@@ -26,7 +26,7 @@ df_install() {
     # system tools
     df_install_brew nano git tree wget unrar p7zip gnupg jq fzf fd bat
     # runtimes
-    df_install_brew node
+    df_install_brew node@12
     # videos
     df_install_brew ffmpeg mkvtoolnix mp4v2 youtube-dl atomicparsley
     # pdf
