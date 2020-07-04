@@ -36,6 +36,10 @@ fi
 
 # homebrew settings
 if [ -e /usr/local/bin/brew ]; then
+    # brew paths
+    export PATH=/usr/local/sbin:$PATH
+    export PATH=/usr/local/bin:$PATH
+    # brew dotfile path
     export PATH=$DOTS/brew-bin:$PATH
     # disabled homebrew analytics mode
     export HOMEBREW_NO_ANALYTICS=1
