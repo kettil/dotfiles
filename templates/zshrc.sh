@@ -198,6 +198,9 @@ mkcdir() { mkdir -p -- "$1" &&  cd -P -- "$1"; }
 
 if [ -e /usr/local/bin/brew ]; then
     alias tree='/usr/local/bin/tree -C'
+fi
+
+if [ "$(which docker | cut -d" " -f1)" != "" ]; then
     alias server-8080='/usr/local/bin/docker run --rm -v $PWD:/usr/share/nginx/html:ro -p 8080:80 nginx'
 fi
 
