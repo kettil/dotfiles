@@ -84,11 +84,11 @@ The following scripts are installed:
 
 | Category     | Packages                                                         |
 | ------------ | ---------------------------------------------------------------- |
+| Development  | nodejs, helm                                                     |
 | Fuse         | osxfuse, sshfs                                                   |
 | Monitoring   | htop, iftop                                                      |
 | Networking   | fping, nmap, speedtest-cli, postman                              |
 | PDF          | gs, qpdf                                                         |
-| Runtimes     | nodejs                                                           |
 | Shell        | zsh                                                              |
 | System Tools | f3, git, nano, p7zip, tree, unrar, wget, gnupg, jq, fzf, fd, bat |
 | Videos       | atomicparsley, ffmpeg, mkvtoolnix, mp4v2, youtube-dl             |
