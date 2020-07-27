@@ -26,7 +26,6 @@ fi
 
 df_brew() {
     for arg in $@; do
-        echo ""
         echo "- $arg"
         brew list $arg > /dev/null 2> /dev/null || brew install $arg
     done
@@ -34,7 +33,6 @@ df_brew() {
 
 df_brew_cask() {
     for arg in $@; do
-        echo ""
         echo "- cask - $arg"
         brew cask list $arg > /dev/null 2> /dev/null || brew cask install $arg
     done
