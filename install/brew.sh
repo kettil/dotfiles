@@ -34,7 +34,11 @@ df_brew_core() {
 df_brew_cask() {
     for arg in $@; do
         echo "- $arg (cask)"
-        brew cask list $arg > /dev/null 2> /dev/null || brew cask install $arg
+        if [ -e /Applications/${arg}.app ]; then
+            brew cask list $arg > /dev/null 2> /dev/null || echo "  -> was installed manually"
+        else
+            brew cask list $arg > /dev/null 2> /dev/null || brew cask install $arg
+        fi
     done
 }
 
