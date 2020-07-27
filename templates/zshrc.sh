@@ -190,10 +190,13 @@ fi
 
 source $DOTS/zshrc_oh-my-zsh.sh
 
+#
 # alias list
+#
+
 alias ll='/bin/ls -lisah'
 
-# helper functions
+# creates a folder and goes into it
 mkcdir() { mkdir -p -- "$1" &&  cd -P -- "$1"; }
 
 if [ -e /usr/local/bin/brew ]; then
@@ -201,6 +204,7 @@ if [ -e /usr/local/bin/brew ]; then
 fi
 
 if [ "$(which docker | cut -d" " -f1)" != "" ]; then
+    # web server for the active folder
     alias server-8080='/usr/local/bin/docker run --rm -v $PWD:/usr/share/nginx/html:ro -p 8080:80 nginx'
 fi
 

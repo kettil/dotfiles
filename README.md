@@ -12,7 +12,7 @@ git clone https://github.com/kettil/dotfiles ~/.dotfiles
 # on mac
 xcode-select --install
 
-cd ~/.dotfiles && ./setup.sh install
+cd ~/.dotfiles && ./setup.sh
 ```
 
 The font of the terminal must be Droid+Sans+Mono+Awesome.ttf
@@ -22,7 +22,7 @@ All scripts/bin folders are defined in the variable \$PATH.
 ## 💻 Update
 
 ```bash
-cd ~/.dotfiles && ./setup.sh update
+cd ~/.dotfiles && ./setup.sh
 ```
 
 ## ⛄ Dotfiles
@@ -75,6 +75,13 @@ The script `pandoc-letter letter.md` must be called in this folder.
 
 Converts a Markdown file to a PDF file.
 The template [Eisvogel](https://github.com/Wandmalfarbe/pandoc-latex-template) is used.
+
+## Kubernetes
+
+If `kubectl` is installed, then the following tools are installed additionally.
+
+- [kubectx](https://github.com/ahmetb/kubectx#kubectx1)
+- [kubens](https://github.com/ahmetb/kubectx#kubens1)
 
 ## 👻 Homebrew (macOS only)
 
