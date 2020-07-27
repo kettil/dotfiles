@@ -91,7 +91,7 @@ The following scripts are installed:
 
 | Category     | Packages                                                         |
 | ------------ | ---------------------------------------------------------------- |
-| Development  | nodejs, helm                                                     |
+| Development  | nodejs, docker, helm                                             |
 | Fuse         | osxfuse, sshfs                                                   |
 | Monitoring   | htop, iftop                                                      |
 | Networking   | fping, nmap, speedtest-cli, postman                              |

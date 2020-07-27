@@ -24,7 +24,7 @@ fi
 # ##### helper ######
 # ###################
 
-df_brew() {
+df_brew_core() {
     for arg in $@; do
         echo "- $arg"
         brew list $arg > /dev/null 2> /dev/null || brew install $arg
@@ -33,7 +33,7 @@ df_brew() {
 
 df_brew_cask() {
     for arg in $@; do
-        echo "- cask - $arg"
+        echo "- $arg (cask)"
         brew cask list $arg > /dev/null 2> /dev/null || brew cask install $arg
     done
 }
@@ -55,22 +55,23 @@ echo ""
 echo "####################"
 echo "# brew : install"
 
-df_brew zsh
+df_brew_core zsh
 # fuse
 df_brew_cask osxfuse
-df_brew sshfs
+df_brew_core sshfs
 # networking
-df_brew nmap fping speedtest-cli
+df_brew_core nmap fping speedtest-cli
 df_brew_cask postman
 # monitoring
-df_brew htop iftop
+df_brew_core htop iftop
 # system tools
-df_brew nano git tree wget unrar p7zip gnupg jq fzf fd bat
+df_brew_core nano git tree wget unrar p7zip gnupg jq fzf fd bat
 # development
-df_brew node helm
+df_brew_core node helm
+df_brew_cask docker
 # videos
-df_brew ffmpeg mkvtoolnix mp4v2 youtube-dl atomicparsley
+df_brew_core ffmpeg mkvtoolnix mp4v2 youtube-dl atomicparsley
 # pdf
-df_brew gs qpdf
+df_brew_core gs qpdf
 # check sd cards
-df_brew f3
+df_brew_core f3
