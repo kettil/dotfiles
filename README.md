@@ -76,7 +76,7 @@ The script `pandoc-letter letter.md` must be called in this folder.
 Converts a Markdown file to a PDF file.
 The template [Eisvogel](https://github.com/Wandmalfarbe/pandoc-latex-template) is used.
 
-## Kubernetes
+## 📡 Kubernetes
 
 If `kubectl` is installed, then the following tools are installed additionally.
 
