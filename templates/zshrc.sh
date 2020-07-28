@@ -1,7 +1,14 @@
+#
+# This file is generated automatically.
+#
+# Every change is deleted.
+#
+
 # path to .dotfiles folder
 export DOTS=$HOME/.dotfiles
 
 export TERM="xterm-256color"
+export EDITOR=nano
 
 # dotfiles bin folder
 export PATH=$DOTS/bin:$PATH
