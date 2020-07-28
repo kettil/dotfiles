@@ -9,42 +9,24 @@ git pull
 
 mkdir -p "${DF_GITS}"
 
-cd "${DF_HOME}"
-source ./install/template.sh
-echo ""
-cd "${DF_HOME}"
-source ./install/dotfiles.sh
-echo ""
-cd "${DF_HOME}"
-source ./install/os-mac.sh
-echo ""
-cd "${DF_HOME}"
-source ./install/os-debian.sh
-echo ""
-cd "${DF_HOME}"
-source ./install/brew.sh
-echo ""
-cd "${DF_HOME}"
-source ./install/docker.sh
-echo ""
-cd "${DF_HOME}"
-source ./install/kubernetes.sh
-echo ""
-cd "${DF_HOME}"
-source ./install/zshrc.sh
-echo ""
-cd "${DF_HOME}"
-source ./install/oh-my-zsh.sh
-echo ""
-cd "${DF_HOME}"
-source ./install/oh-my-zsh-theme-powerlevel9k.sh
-echo ""
-cd "${DF_HOME}"
-source ./install/oh-my-zsh-plugin.sh "zsh-autosuggestions" "https://github.com/zsh-users/zsh-autosuggestions.git"
-echo ""
-cd "${DF_HOME}"
-source ./install/oh-my-zsh-plugin.sh "zsh-syntax-highlighting" "https://github.com/zsh-users/zsh-syntax-highlighting.git"
-echo ""
+df_install() {
+  cd "${DF_HOME}"
+  source ./install/$1.sh "$2" "$3"
+  echo ""
+}
+
+df_install "template"
+df_install "dotfiles"
+df_install "os-mac"
+df_install "os-debian"
+df_install "brew"
+df_install "docker"
+df_install "kubernetes"
+df_install "zshrc"
+df_install "oh-my-zsh"
+df_install "oh-my-zsh-theme-powerlevel9k"
+df_install "oh-my-zsh-plugin.sh" "zsh-autosuggestions" "https://github.com/zsh-users/zsh-autosuggestions.git"
+df_install "oh-my-zsh-plugin.sh" "zsh-syntax-highlighting" "https://github.com/zsh-users/zsh-syntax-highlighting.git"
 
 echo "####################"
 echo "#"
