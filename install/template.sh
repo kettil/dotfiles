@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DF_TEMPLATE_ENV="~/.dotfiles.env"
+DF_TEMPLATE_ENV="$HOME/.dotfiles.env"
 DF_TEMPLATE_ENVTXT="$DF_HOME/templates/.env.txt"
 DF_TEMPLATE_SOURCE="$DF_HOME/templates"
 DF_TEMPLATE_TARGET="$DF_HOME/configs"
@@ -8,6 +8,11 @@ DF_TEMPLATE_TARGET="$DF_HOME/configs"
 # ###################
 # #### condition ####
 # ###################
+
+if [ "${HOME}" == "" ]; then
+    echo '$HOME is not defined'
+    exit
+fi
 
 if [ "${DF_HOME}" == "" ]; then
     echo '$DF_HOME is not defined'
@@ -34,6 +39,8 @@ fi
 df_render() {
   DF_TEMPLATE_FILE="$1"
 
+  echo "- ~/.${gitconfig}"
+
   cp "$DF_TEMPLATE_SOURCE/$DF_TEMPLATE_FILE" "$DF_TEMPLATE_TARGET/.$DF_TEMPLATE_FILE"
 
   cat "$DF_TEMPLATE_ENV" | grep -v '^#' | grep -v '^$' | while read line; do
@@ -55,5 +62,5 @@ df_render() {
 # ###################
 
 echo "####################"
-echo "# template : gitconfig"
+echo "# template : create files"
 df_render "gitconfig"
