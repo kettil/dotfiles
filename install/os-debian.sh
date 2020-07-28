@@ -10,7 +10,8 @@ fi
 
 if [ "${DF_HOME}" == "" ]; then
     echo '$DF_HOME is not defined'
-    exit
+
+    exit 1
 fi
 
 # ###################

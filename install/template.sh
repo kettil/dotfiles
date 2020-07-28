@@ -11,12 +11,14 @@ DF_TEMPLATE_TARGET="$DF_HOME/configs"
 
 if [ "${HOME}" == "" ]; then
     echo '$HOME is not defined'
-    exit
+
+    exit 1
 fi
 
 if [ "${DF_HOME}" == "" ]; then
     echo '$DF_HOME is not defined'
-    exit
+
+    exit 1
 fi
 
 if [ ! -e "$DF_TEMPLATE_ENV" ]; then
@@ -29,7 +31,7 @@ if [ ! -e "$DF_TEMPLATE_ENV" ]; then
     echo "#"
     echo ""
 
-    exit
+    exit 1
 fi
 
 # ###################

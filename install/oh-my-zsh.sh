@@ -8,12 +8,14 @@ DF_NAME="oh-my-zsh"
 
 if [ "${DF_HOME}" == "" ]; then
     echo '$DF_HOME is not defined'
-    exit
+
+    exit 1
 fi
 
 if [ "${DF_GITS}" == "" ]; then
     echo '$DF_GITS is not defined'
-    exit
+
+    exit 1
 fi
 
 if [ "$(whoami)" != "$(ls -ld "${DF_HOME}" | awk '{print $3}')" ]; then

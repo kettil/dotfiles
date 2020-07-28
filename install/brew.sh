@@ -17,7 +17,7 @@ if [ ! -e /usr/local/bin/brew ]; then
     echo "#"
     echo ""
 
-    exit
+    exit 1
 fi
 
 # ###################
@@ -34,6 +34,7 @@ df_brew_core() {
 df_brew_cask() {
     for arg in $@; do
         echo "- $arg (cask)"
+
         if [ -e /Applications/${arg}.app ]; then
             brew cask list $arg > /dev/null 2> /dev/null || echo "  -> was installed manually"
         else
