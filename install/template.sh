@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# tmp
-DF_HOME=".."
-
-
-
 DF_TEMPLATE_ENV="$DF_HOME/.env"
 DF_TEMPLATE_ENVTXT="$DF_TEMPLATE_ENV.txt"
 DF_TEMPLATE_SOURCE="$DF_HOME/templates"
