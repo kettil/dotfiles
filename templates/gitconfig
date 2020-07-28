@@ -231,3 +231,7 @@
 	w = show
 	wp = show -p
 	wr = show -p --no-color
+	#############
+	wta = worktree add
+	wkr = worktree remove
+	wkl = worktree list
