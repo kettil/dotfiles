@@ -10,6 +10,9 @@ git pull
 mkdir -p "${DF_GITS}"
 
 cd "${DF_HOME}"
+source ./install/template.sh
+echo ""
+cd "${DF_HOME}"
 source ./install/dotfiles.sh
 echo ""
 cd "${DF_HOME}"
