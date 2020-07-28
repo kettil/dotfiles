@@ -39,7 +39,7 @@ fi
 df_render() {
   DF_TEMPLATE_FILE="$1"
 
-  echo "- ~/.${gitconfig}"
+  echo "- ~/.${DF_TEMPLATE_FILE}"
 
   cp "$DF_TEMPLATE_SOURCE/$DF_TEMPLATE_FILE" "$DF_TEMPLATE_TARGET/.$DF_TEMPLATE_FILE"
 
