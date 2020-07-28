@@ -4,7 +4,6 @@
 /gits
 
 # dotfiles - files
-/.env
 /zshrc.sh
 /zshrc_oh-my-zsh.sh
 
