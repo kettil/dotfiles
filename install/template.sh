@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DF_TEMPLATE_ENV="~/.dotfiles_env"
+DF_TEMPLATE_ENV="~/.dotfiles.env"
 DF_TEMPLATE_ENVTXT="$DF_HOME/templates/.env.txt"
 DF_TEMPLATE_SOURCE="$DF_HOME/templates"
 DF_TEMPLATE_TARGET="$DF_HOME/configs"
