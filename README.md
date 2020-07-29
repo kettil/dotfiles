@@ -53,7 +53,7 @@ List of all scripts in [./bin](./bin).
 - `color-table.sh` - showed a color table in the shell (with color codes)
 - `sleeps` - sleeps is an extension of `sleep` with a visual representation of the waiting time
 
-## 👻 Homebrew (macOS only)
+## 👻 Homebrew
 
 [Homebrew](https://brew.sh) is a package manager for macOS.
 
