@@ -12,6 +12,7 @@ git clone https://github.com/kettil/dotfiles ~/.dotfiles
 # on mac
 xcode-select --install
 
+# command for install and update
 cd ~/.dotfiles && ./setup.sh
 ```
 
@@ -25,12 +26,6 @@ It is possible to customize the zshrc per pre/post files.
 
 - `~/.zshrc_pre.zsh` - Is called before the initiation of `oh-my-zsh`
 - `~/.zshrc_post.zsh` - Is called at the end
-
-## 💻 Update
-
-```bash
-cd ~/.dotfiles && ./setup.sh
-```
 
 ## ⛄ Dotfiles
 
