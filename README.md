@@ -35,9 +35,9 @@ The following aliases are defined:
 
 - `mkcdir` - create a folder and calls upon this
 - `code` - starts **Visual Basic Code**, if installed
-- `ios` - starts **iOS Simulator**, only mac
-- `fileMerge` - starts **FileMerge** simulator, only mac
-- `server-8080` - start a web server in the current order, if installed **docker**
+- `ios` - starts **iOS Simulator**, if **xCode** is installed
+- `fileMerge` - starts **FileMerge** simulator, if **xCode** is installed
+- `server-8080` - start a web server in the current order, if **docker** is installed
 
 ## 👽 Scripts
 
