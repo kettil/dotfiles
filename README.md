@@ -34,7 +34,7 @@ cd ~/.dotfiles && ./setup.sh
 
 ## ⛄ Dotfiles
 
-All static dotfiles are stored in the [./configs](./configs) folder. Via `./setup` the files are linked to the home directory. The folder structure of configs is kept in the home directory.
+All static dotfiles are stored in the [./configs](./configs) folder. Via `./setup.sh` the files are linked to the home directory. The folder structure of configs is kept in the home directory.
 
 ## 🗺 Aliases
 
