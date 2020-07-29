@@ -29,12 +29,22 @@ cd ~/.dotfiles && ./setup.sh
 
 All static dotfiles are stored in the [./configs](./configs) folder. Via `./setup install` or `./setup update` the files are linked to the home directory. The folder structure of configs is kept in the home directory.
 
+## 🗺 Aliases
+
+The following aliases are defined:
+
+- `mkcdir` - create a folder and calls upon this
+- `code` - starts **Visual Basic Code**, if installed
+- `ios` - starts **iOS Simulator**, only mac
+- `fileMerge` - starts **FileMerge** simulator, only mac
+- `server-8080` - start a web server in the current order, if installed **docker**
+
 ## 👽 Scripts
 
 List of all scripts in [./bin](./bin).
 
-- **color-table.sh** - showed a color table in the shell (with color codes)
-- **sleeps** - sleeps is an extension of **sleep** with a visual representation of the waiting time
+- `color-table.sh` - showed a color table in the shell (with color codes)
+- `sleeps` - sleeps is an extension of `sleep` with a visual representation of the waiting time
 
 ## 💥 Docker
 
@@ -54,14 +64,14 @@ You can also create or delete all containers at once:
 ### Containers (with scripts)
 
 - **hadolint** - a Dockerfile linter
-  - hadolint
+  - `hadolint`
 - **LaTeX** - a container with texlive.
-  - pdflatex
-  - xelatex
+  - `pdflatex`
+  - `xelatex`
 - **Pandoc** - a container with pandoc.
-  - pandoc
-  - pandoc-pdf (uses the LaTeX container)
-  - pandoc-letter (uses the LaTeX container)
+  - `pandoc`
+  - `pandoc-pdf` (uses the LaTeX container)
+  - `pandoc-letter` (uses the LaTeX container)
 
 ### Script: pandoc-letter
 
@@ -104,6 +114,6 @@ The following scripts are installed:
 
 List of all scripts in [./brew-bin](./brew-bin).
 
-- **flash-check.sh** - checks flash memory cards for their size (e.g. `flash-check.sh /path/to/flashcard`). The flash memory card should be empty.
-- **pdf-merged.sh** - merges many PDF files into one (e.g. `pdf-merged.sh 1.pdf 2.pdf`).
-- **pdf-smaller.sh** - reduce the size of a PDF, if possible (e.g. `pdf-smaller.sh 1.pdf`).
+- `flash-check.sh` - checks flash memory cards for their size (e.g. `flash-check.sh /path/to/flashcard`). The flash memory card should be empty.
+- `pdf-merged.sh` - merges many PDF files into one (e.g. `pdf-merged.sh 1.pdf 2.pdf`).
+- `pdf-smaller.sh` - reduce the size of a PDF, if possible (e.g. `pdf-smaller.sh 1.pdf`).
