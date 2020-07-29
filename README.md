@@ -19,6 +19,13 @@ The font of the terminal must be Droid+Sans+Mono+Awesome.ttf
 
 All scripts/bin folders are defined in the variable \$PATH.
 
+### Adaptation of zsh
+
+It is possible to customize the zshrc per pre/post files.
+
+- `~/.zshrc_pre.zsh` - Is called before the initiation of `oh-my-zsh`
+- `~/.zshrc_post.zsh` - Is called at the end
+
 ## 💻 Update
 
 ```bash
@@ -27,7 +34,7 @@ cd ~/.dotfiles && ./setup.sh
 
 ## ⛄ Dotfiles
 
-All static dotfiles are stored in the [./configs](./configs) folder. Via `./setup install` or `./setup update` the files are linked to the home directory. The folder structure of configs is kept in the home directory.
+All static dotfiles are stored in the [./configs](./configs) folder. Via `./setup` the files are linked to the home directory. The folder structure of configs is kept in the home directory.
 
 ## 🗺 Aliases
 
