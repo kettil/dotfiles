@@ -34,9 +34,9 @@ All static dotfiles are stored in the [./configs](./configs) folder. Via `./setu
 The following aliases are defined:
 
 - `mkcdir` - create a folder and calls upon this
-- `code` - starts **Visual Basic Code**, if installed
-- `ios` - starts **iOS Simulator**, if **xCode** is installed
-- `fileMerge` - starts **FileMerge** simulator, if **xCode** is installed
+- `code` - starts **Visual Basic Code**, if installed (only mac)
+- `ios` - starts **iOS Simulator**, if **xCode** is installed (only mac)
+- `fileMerge` - starts **FileMerge** simulator, if **xCode** is installed (only mac)
 - `server-8080` - start a web server in the current order, if **docker** is installed
 
 ## 👽 Scripts
