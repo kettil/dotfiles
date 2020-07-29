@@ -46,6 +46,31 @@ List of all scripts in [./bin](./bin).
 - `color-table.sh` - showed a color table in the shell (with color codes)
 - `sleeps` - sleeps is an extension of `sleep` with a visual representation of the waiting time
 
+## 👻 Homebrew (macOS only)
+
+[Homebrew](https://brew.sh) is a package manager for macOS.
+
+The following scripts are installed:
+
+| Category     | Packages                                                         |
+| ------------ | ---------------------------------------------------------------- |
+| Development  | nodejs, docker, helm                                             |
+| Fuse         | osxfuse, sshfs                                                   |
+| Monitoring   | htop, iftop                                                      |
+| Networking   | fping, nmap, speedtest-cli, postman                              |
+| PDF          | gs, qpdf                                                         |
+| Shell        | zsh                                                              |
+| System Tools | f3, git, nano, p7zip, tree, unrar, wget, gnupg, jq, fzf, fd, bat |
+| Videos       | atomicparsley, ffmpeg, mkvtoolnix, mp4v2, youtube-dl             |
+
+### Scripts
+
+List of all scripts in [./brew-bin](./brew-bin).
+
+- `flash-check.sh` - checks flash memory cards for their size (e.g. `flash-check.sh /path/to/flashcard`). The flash memory card should be empty.
+- `pdf-merged.sh` - merges many PDF files into one (e.g. `pdf-merged.sh 1.pdf 2.pdf`).
+- `pdf-smaller.sh` - reduce the size of a PDF, if possible (e.g. `pdf-smaller.sh 1.pdf`).
+
 ## 💥 Docker
 
 The container files are in [./docker](./docker) and the associated scripts in [./docker-bin](./docker-bin).
@@ -92,28 +117,3 @@ If `kubectl` is installed, then the following tools are installed additionally.
 
 - [kubectx](https://github.com/ahmetb/kubectx#kubectx1)
 - [kubens](https://github.com/ahmetb/kubectx#kubens1)
-
-## 👻 Homebrew (macOS only)
-
-[Homebrew](https://brew.sh) is a package manager for macOS.
-
-The following scripts are installed:
-
-| Category     | Packages                                                         |
-| ------------ | ---------------------------------------------------------------- |
-| Development  | nodejs, docker, helm                                             |
-| Fuse         | osxfuse, sshfs                                                   |
-| Monitoring   | htop, iftop                                                      |
-| Networking   | fping, nmap, speedtest-cli, postman                              |
-| PDF          | gs, qpdf                                                         |
-| Shell        | zsh                                                              |
-| System Tools | f3, git, nano, p7zip, tree, unrar, wget, gnupg, jq, fzf, fd, bat |
-| Videos       | atomicparsley, ffmpeg, mkvtoolnix, mp4v2, youtube-dl             |
-
-### Scripts
-
-List of all scripts in [./brew-bin](./brew-bin).
-
-- `flash-check.sh` - checks flash memory cards for their size (e.g. `flash-check.sh /path/to/flashcard`). The flash memory card should be empty.
-- `pdf-merged.sh` - merges many PDF files into one (e.g. `pdf-merged.sh 1.pdf 2.pdf`).
-- `pdf-smaller.sh` - reduce the size of a PDF, if possible (e.g. `pdf-smaller.sh 1.pdf`).
