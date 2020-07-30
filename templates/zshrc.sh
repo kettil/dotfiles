@@ -202,6 +202,7 @@ source $DOTS/zshrc_oh-my-zsh.sh
 #
 
 alias ll='/bin/ls -lisah'
+alias nano='/usr/local/bin/nano -lc'
 
 # creates a folder and goes into it
 mkcdir() { mkdir -p -- "$1" &&  cd -P -- "$1"; }
