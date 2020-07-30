@@ -77,4 +77,3 @@ color brightblack "#"
 
 # Commit IDs
 color brightblue "[0-9a-f]{7,40}"
-
