@@ -66,17 +66,18 @@ df_brew_cask osxfuse
 df_brew_core sshfs
 # networking
 df_brew_core nmap fping speedtest-cli
-df_brew_cask postman
 # monitoring
 df_brew_core htop iftop
 # system tools
 df_brew_core nano git tree wget unrar p7zip gnupg jq fzf fd bat
 # development
 df_brew_core node helm
-df_brew_cask docker
+df_brew_cask docker postman
 # videos
 df_brew_core ffmpeg mkvtoolnix mp4v2 youtube-dl atomicparsley
 # pdf
 df_brew_core gs qpdf
 # check sd cards
 df_brew_core f3
+# applications
+df_brew_cask hex-fiend

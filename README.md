@@ -56,10 +56,11 @@ The following scripts are installed:
 
 | Category     | Packages                                                         |
 | ------------ | ---------------------------------------------------------------- |
-| Development  | nodejs, docker, helm                                             |
+| Application  | hex-fiend                                                        |
+| Development  | nodejs, docker, helm, postman                                    |
 | Fuse         | osxfuse, sshfs                                                   |
 | Monitoring   | htop, iftop                                                      |
-| Networking   | fping, nmap, speedtest-cli, postman                              |
+| Networking   | fping, nmap, speedtest-cli                                       |
 | PDF          | gs, qpdf                                                         |
 | Shell        | zsh                                                              |
 | System Tools | f3, git, nano, p7zip, tree, unrar, wget, gnupg, jq, fzf, fd, bat |
