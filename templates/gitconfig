@@ -18,8 +18,7 @@
   defaultBranch = main
 
 [pull]
-  rebase = merges
-  #rebase = false
+  rebase = false
 
 [push]
   default = matching
