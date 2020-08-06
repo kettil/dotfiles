@@ -16,6 +16,17 @@ export PATH=$DOTS/bin:$PATH
 # list of oh-my-zsh plugins
 plugins=(git npm zsh-autosuggestions zsh-syntax-highlighting)
 
+# homebrew settings
+if [ -e /usr/local/bin/brew ]; then
+    # brew paths
+    export PATH=/usr/local/sbin:$PATH
+    export PATH=/usr/local/bin:$PATH
+    # brew dotfile path
+    export PATH=$DOTS/brew-bin:$PATH
+    # disabled homebrew analytics mode
+    export HOMEBREW_NO_ANALYTICS=1
+fi
+
 # added special docker scripts, if docker is installed
 if [ "$(which docker | cut -d" " -f1)" != "" ]; then
     plugins+=(docker)
@@ -39,17 +50,6 @@ fi
 # added special helm (kubernetes) scripts, if helm is installed
 if [ "$(which helm | cut -d" " -f1)" != "" ]; then
     plugins+=(helm)
-fi
-
-# homebrew settings
-if [ -e /usr/local/bin/brew ]; then
-    # brew paths
-    export PATH=/usr/local/sbin:$PATH
-    export PATH=/usr/local/bin:$PATH
-    # brew dotfile path
-    export PATH=$DOTS/brew-bin:$PATH
-    # disabled homebrew analytics mode
-    export HOMEBREW_NO_ANALYTICS=1
 fi
 
 # load macos plugin if it is a mac
