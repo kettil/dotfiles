@@ -11,7 +11,8 @@
 /docker-bin/dotfiles-docker-build-*
 /docker-bin/dotfiles-docker-rm-*
 
-# files from gits folder
+# files from DOTS projekts
+/bin/code
 /bin/kubectx
 /bin/kubens
 
