@@ -27,9 +27,9 @@
   gpgsign = %DOTFILES_GIT_COMMIT_GPGSIGN%
 
 [merge]
-    tool = vscode
+    tool = $DOTFILES_GIT_TOOL_EDITOR
 [mergetool "vscode"]
-    cmd = "code --wait "
+    cmd = code --wait $MERGED
 
 [gpg]
   program = %DOTFILES_GIT_GPG_PROGRAM%
@@ -47,9 +47,9 @@
   # Display submodule-related information (commit listings)
   submodule = log
   # Use VSCode as default diff tool when running `git diff-tool`
-  tool = vscode
+  tool = $DOTFILES_GIT_TOOL_EDITOR
 [difftool "vscode"]
-  cmd = "code --wait --diff $LOCAL $REMOTE "
+  cmd = code --wait --diff $LOCAL $REMOTE
 
 [color]
   ui = true
