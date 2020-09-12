@@ -71,7 +71,7 @@ df_brew_core htop iftop
 # system tools
 df_brew_core nano git tree wget unrar p7zip gnupg jq fzf fd bat
 # development
-df_brew_core node helm
+df_brew_core node helm grex
 df_brew_cask docker postman
 # videos
 df_brew_core ffmpeg mkvtoolnix mp4v2 youtube-dl atomicparsley
