@@ -69,7 +69,7 @@ df_brew_core nmap fping speedtest-cli
 # monitoring
 df_brew_core htop iftop
 # system tools
-df_brew_core nano git tree wget unrar p7zip gnupg jq fzf fd bat
+df_brew_core nano git tree wget unrar p7zip gnupg jq fzf fd bat exa
 # development
 df_brew_core node helm grex
 df_brew_cask docker postman

@@ -209,6 +209,10 @@ mkcdir() { mkdir -p -- "$1" &&  cd -P -- "$1"; }
 
 if [ -e /usr/local/bin/brew ]; then
     alias tree='/usr/local/bin/tree -C'
+
+    alias exa='/usr/local/bin/exa --long --header --group --all --git --time-style=long-iso'
+    alias exa-tree='exa --tree --level=2'
+    alias exa-node='exa --tree --level=5 --git-ignore --ignore-glob="*node_modules*" --ignore-glob="*.git*"'
 fi
 
 if [ "$(which docker | cut -d" " -f1)" != "" ]; then
