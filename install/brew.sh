@@ -58,6 +58,14 @@ brew upgrade
 
 echo ""
 echo "####################"
+echo "# brew : remove"
+
+echo "- node"
+brew list node > /dev/null 2> /dev/null && brew uninstall --ignore-dependencies node
+brew list node > /dev/null 2> /dev/null && brew uninstall --force node
+
+echo ""
+echo "####################"
 echo "# brew : install"
 
 df_brew_core zsh
@@ -71,7 +79,7 @@ df_brew_core htop iftop
 # system tools
 df_brew_core nano git tree wget unrar p7zip gnupg jq fzf fd bat exa
 # development
-df_brew_core node helm grex
+df_brew_core helm grex nvm
 df_brew_cask docker postman
 # videos
 df_brew_core ffmpeg mkvtoolnix mp4v2 youtube-dl atomicparsley
@@ -81,3 +89,33 @@ df_brew_core gs qpdf
 df_brew_core f3
 # applications
 df_brew_cask hex-fiend
+
+
+echo ""
+echo "####################"
+echo "# brew(nvm) : configure"
+
+export NVM_DIR="$HOME/.nvm"
+mkdir -p $NVM_DIR
+
+if [ ! -e $HOME/.nvmrc ]; then
+    echo "lts/*" > $HOME/.nvmrc
+fi
+
+source $(brew --prefix nvm)/nvm.sh
+nvm cache clear
+
+echo ""
+echo "####################"
+echo "# brew(nvm) : install latest"
+nvm install node
+
+echo ""
+echo "####################"
+echo "# brew(nvm) : install LTS"
+nvm install --lts
+
+echo ""
+echo "####################"
+echo "# brew(nvm) : switch to default"
+nvm use

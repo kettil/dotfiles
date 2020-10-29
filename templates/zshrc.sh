@@ -14,7 +14,7 @@ export EDITOR=nano
 export PATH=$DOTS/bin:$PATH
 
 # list of oh-my-zsh plugins
-plugins=(git npm zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 # homebrew settings
 if [ -e /usr/local/bin/brew ]; then
@@ -25,6 +25,9 @@ if [ -e /usr/local/bin/brew ]; then
     export PATH=$DOTS/brew-bin:$PATH
     # disabled homebrew analytics mode
     export HOMEBREW_NO_ANALYTICS=1
+
+    # node.js
+    plugins+=(npm nvm)
 fi
 
 # added special docker scripts, if docker is installed

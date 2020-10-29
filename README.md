@@ -57,7 +57,7 @@ The following scripts are installed:
 | Category     | Packages                                                              |
 | ------------ | --------------------------------------------------------------------- |
 | Application  | hex-fiend                                                             |
-| Development  | nodejs, docker, helm, postman, grex                                   |
+| Development  | nvm (node.js), docker, helm, postman, grex                            |
 | Fuse         | osxfuse, sshfs                                                        |
 | Monitoring   | htop, iftop                                                           |
 | Networking   | fping, nmap, speedtest-cli                                            |
