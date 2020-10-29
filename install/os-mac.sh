@@ -23,7 +23,7 @@ echo "# macos : change settings"
 echo ""
 
 # change default save location to local storage from iCloud for all Apps
-echo " - NSDocumentSaveNewDocumentsToCloud"
+echo "- NSDocumentSaveNewDocumentsToCloud"
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 echo ""
