@@ -24,7 +24,7 @@ df_install "docker"
 df_install "kubernetes"
 df_install "zshrc"
 df_install "oh-my-zsh"
-df_install "oh-my-zsh-theme-powerlevel9k"
+df_install "oh-my-zsh-theme-powerlevel10k"
 df_install "oh-my-zsh-plugin" "zsh-autosuggestions" "https://github.com/zsh-users/zsh-autosuggestions.git"
 df_install "oh-my-zsh-plugin" "zsh-syntax-highlighting" "https://github.com/zsh-users/zsh-syntax-highlighting.git"
 

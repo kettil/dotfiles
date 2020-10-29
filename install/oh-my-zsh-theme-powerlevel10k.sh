@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DF_NAME="powerlevel9k"
+DF_NAME="powerlevel10k"
 DF_FULLNAME="oh-my-zsh-theme-${DF_NAME}"
 DF_TARGET="${DF_GITS}/oh-my-zsh/custom/themes"
 
@@ -34,7 +34,7 @@ if [ -d "${DF_GITS}/${DF_FULLNAME}" ]; then
     cd "${DF_GITS}/${DF_FULLNAME}"
     git pull --rebase --stat origin master
 else
-    git clone --depth=1 https://github.com/bhilburn/powerlevel9k.git "${DF_GITS}/${DF_FULLNAME}"
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${DF_GITS}/${DF_FULLNAME}"
 fi
 
 echo ""
