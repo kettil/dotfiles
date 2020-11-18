@@ -27,6 +27,7 @@ if [ -e /usr/local/bin/brew ]; then
     export HOMEBREW_NO_ANALYTICS=1
 
     # node.js
+    NVM_LAZY=1
     plugins+=(npm nvm)
 fi
 

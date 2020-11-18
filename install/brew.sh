@@ -117,5 +117,5 @@ nvm install --lts
 
 echo ""
 echo "####################"
-echo "# brew(nvm) : switch to default"
-nvm use
+echo "# brew(nvm) : LTS is the default version"
+nvm alias default "lts/*"
