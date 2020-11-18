@@ -211,6 +211,10 @@ alias nano='/usr/local/bin/nano -lc'
 # creates a folder and goes into it
 mkcdir() { mkdir -p -- "$1" &&  cd -P -- "$1"; }
 
+if [ -e ${HOME}/.backup/backup.sh ]; then
+    alias bborg="${HOME}/.backup/backup.sh"
+fi
+
 if [ -e /usr/local/bin/brew ]; then
     alias tree='/usr/local/bin/tree -C'
 
