@@ -36,9 +36,9 @@ df_brew_cask() {
         echo "- $arg (cask)"
 
         if [ -e /Applications/${arg}.app ]; then
-            brew cask list $arg > /dev/null 2> /dev/null || echo "  -> was installed manually"
+            brew list --cask $arg > /dev/null 2> /dev/null || echo "  -> was installed manually"
         else
-            brew cask list $arg > /dev/null 2> /dev/null || brew cask install $arg
+            brew list --cask $arg > /dev/null 2> /dev/null || brew install --cask $arg
         fi
     done
 }
