@@ -218,8 +218,8 @@ fi
 # alias list
 #
 
-alias ls='/bin/ls -F ${colorflag}'
-alias ll='/bin/ls -lisahF ${colorflag}'
+alias ls='ls -F ${colorflag}'
+alias ll='ls -lisahF ${colorflag}'
 alias nano='/usr/local/bin/nano -lc'
 
 alias ..="cd .."
