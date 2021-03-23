@@ -54,17 +54,17 @@ List of all scripts in [./bin](./bin).
 
 The following scripts are installed:
 
-| Category     | Packages                                                              |
-| ------------ | --------------------------------------------------------------------- |
-| Application  | hex-fiend                                                             |
-| Development  | nvm (node.js), docker, helm, postman, grex                            |
-| Fuse         | osxfuse, sshfs                                                        |
-| Monitoring   | htop, iftop                                                           |
-| Networking   | fping, nmap, speedtest-cli                                            |
-| PDF          | gs, qpdf                                                              |
-| Shell        | zsh                                                                   |
-| System Tools | f3, git, nano, p7zip, tree, unrar, wget, gnupg, jq, fzf, fd, bat, exa |
-| Videos       | atomicparsley, ffmpeg, mkvtoolnix, mp4v2, youtube-dl                  |
+| Category     | Packages                                                                                                                                                |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Application  | hex-fiend                                                                                                                                               |
+| Development  | nvm (node.js), docker, helm, postman, grex                                                                                                              |
+| Fuse         | osxfuse, sshfs                                                                                                                                          |
+| Monitoring   | htop, iftop                                                                                                                                             |
+| Networking   | fping, nmap, speedtest-cli                                                                                                                              |
+| PDF          | gs, qpdf                                                                                                                                                |
+| Shell        | zsh                                                                                                                                                     |
+| System Tools | coreutils, moreutils, findutils, f3, git, git-lfs, nano, p7zip, tree, unrar, wget, gnupg, jq, fzf, fd, bat, exa, grep, openssh, screen, gs, imagemagick |
+| Videos       | atomicparsley, ffmpeg, mkvtoolnix, mp4v2, youtube-dl                                                                                                    |
 
 ### Scripts
 
