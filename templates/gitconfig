@@ -23,6 +23,10 @@
 [push]
   default = matching
 
+[merge]
+	# Include summaries of merged commits in newly created merge commit messages
+	log = true
+
 [commit]
   gpgsign = %DOTFILES_GIT_COMMIT_GPGSIGN%
 
@@ -30,6 +34,10 @@
     tool = %DOTFILES_GIT_TOOL_EDITOR%
 [mergetool "vscode"]
     cmd = code --wait $MERGED
+
+[help]
+	# Automatically correct and execute mistyped commands.
+	autocorrect = 1
 
 [gpg]
   program = %DOTFILES_GIT_GPG_PROGRAM%
@@ -48,6 +56,9 @@
   submodule = log
   # Use VSCode as default diff tool when running `git diff-tool`
   tool = %DOTFILES_GIT_TOOL_EDITOR%
+[diff "bin"]
+	# Use `hexdump` to diff binary files.
+	textconv = hexdump -v -C
 [difftool "vscode"]
   cmd = code --wait --diff $LOCAL $REMOTE
 
