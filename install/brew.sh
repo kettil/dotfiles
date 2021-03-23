@@ -77,13 +77,12 @@ df_brew_core moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 df_brew_core findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-df_brew_core gnu-sed --with-default-names
+df_brew_core gnu-sed
 df_brew_core nano
 df_brew_core git
 df_brew_core git-lfs
 df_brew_core tree
-# Install `wget` with IRI support.
-brew install wget --with-iri
+df_brew_core wget
 df_brew_core unrar
 df_brew_core p7zip
 # Install GnuPG to enable PGP-signing commits.
@@ -96,8 +95,6 @@ df_brew_core exa
 df_brew_core grep
 df_brew_core openssh
 df_brew_core screen
-df_brew_core gs
-df_brew_core imagemagick --with-webp
 
 # fuse
 
@@ -148,6 +145,7 @@ echo ""
 echo "####################"
 echo "# brew : cleanup"
 
+brew autoremove
 brew cleanup
 
 echo ""

@@ -14,6 +14,7 @@ export EDITOR=nano
 export PATH=$DOTS/bin:$PATH
 # coreutils bin folder
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+export PATH=$(brew --prefix gnu-sed)/libexec/gnubin:$PATH
 
 # list of oh-my-zsh plugins
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
