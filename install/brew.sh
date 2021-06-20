@@ -95,6 +95,7 @@ df_brew_core exa
 df_brew_core grep
 df_brew_core openssh
 df_brew_core screen
+df_brew_core csvq
 
 # fuse
 
