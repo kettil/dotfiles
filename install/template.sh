@@ -49,13 +49,13 @@ df_render() {
     DF_TEMPLATE_RENDER_KEY="$( echo "$line" | cut -d '=' -f 1 )"
     DF_TEMPLATE_RENDER_VALUE="$( echo "$line" | cut -d '=' -f 2- )"
 
-    sed -i '' -e "s;%${DF_TEMPLATE_RENDER_KEY}%;${DF_TEMPLATE_RENDER_VALUE};g" "$DF_TEMPLATE_TARGET/.$DF_TEMPLATE_FILE"
+    sed -i "s;%${DF_TEMPLATE_RENDER_KEY}%;${DF_TEMPLATE_RENDER_VALUE};g" "$DF_TEMPLATE_TARGET/.$DF_TEMPLATE_FILE"
   done
 
   cat "$DF_TEMPLATE_ENVTXT" | grep -v '^#' | grep -v '^$' | while read line; do
     DF_TEMPLATE_RENDER_KEY="$( echo "$line" | cut -d '=' -f 1 )"
 
-    sed -i '' -e "s;^\(.*\)%${DF_TEMPLATE_RENDER_KEY}%\(.*\)$;#\1%${DF_TEMPLATE_RENDER_KEY}%\2;g" "$DF_TEMPLATE_TARGET/.$DF_TEMPLATE_FILE"
+    sed -i "s;^\(.*\)%${DF_TEMPLATE_RENDER_KEY}%\(.*\)$;#\1%${DF_TEMPLATE_RENDER_KEY}%\2;g" "$DF_TEMPLATE_TARGET/.$DF_TEMPLATE_FILE"
   done
 }
 
