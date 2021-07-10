@@ -17,8 +17,7 @@ df_install() {
 
 df_install "template"
 df_install "dotfiles"
-df_install "os-mac"
-df_install "os-debian"
+df_install "macos"
 df_install "brew"
 df_install "docker"
 df_install "kubernetes"
