@@ -12,9 +12,6 @@ export EDITOR=nano
 
 # dotfiles bin folder
 export PATH=$DOTS/bin:$PATH
-# coreutils bin folder
-export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
-export PATH=$(brew --prefix gnu-sed)/libexec/gnubin:$PATH
 
 # list of oh-my-zsh plugins
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
@@ -26,6 +23,10 @@ if [ -e /usr/local/bin/brew ]; then
     export PATH=/usr/local/bin:$PATH
     # brew dotfile path
     export PATH=$DOTS/brew-bin:$PATH
+    # coreutils bin folder
+    export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
+    export PATH=$(brew --prefix gnu-sed)/libexec/gnubin:$PATH
+
     # disabled homebrew analytics mode
     export HOMEBREW_NO_ANALYTICS=1
 
