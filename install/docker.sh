@@ -8,6 +8,10 @@ DF_DOCKER_PRE="dotfiles-docker"
 # #### condition ####
 # ###################
 
+if [ "${OSTYPE:0:6}" != "darwin" ]; then
+    return
+fi
+
 if [ "$(which docker | cut -d" " -f1)" == "" ]; then
     return
 fi
