@@ -15,10 +15,10 @@ df_install() {
   echo ""
 }
 
-df_install "template"
-df_install "dotfiles"
 df_install "macos"
 df_install "brew"
+df_install "dotfiles"
+df_install "template"
 df_install "docker"
 df_install "kubernetes"
 df_install "zshrc"
