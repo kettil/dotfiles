@@ -3,7 +3,7 @@
 DF_TEMPLATE_ENV="$HOME/.dotfiles.env"
 DF_TEMPLATE_ENVTXT="$DF_HOME/templates/.env.txt"
 DF_TEMPLATE_SOURCE="$DF_HOME/templates"
-DF_TEMPLATE_TARGET="$DF_HOME/configs"
+DF_TEMPLATE_TARGET="$HOME"
 
 # ###################
 # #### condition ####
