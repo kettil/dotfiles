@@ -221,7 +221,6 @@ fi
 
 alias ls='ls -F ${colorflag}'
 alias ll='ls -lisahF ${colorflag}'
-alias nano='/usr/local/bin/nano -lc'
 
 alias ..="cd .."
 alias ...="cd ../.."
@@ -244,9 +243,13 @@ fi
 if [ -e /usr/local/bin/brew ]; then
     alias tree='/usr/local/bin/tree -C'
 
+    alias nano='/usr/local/bin/nano -lc'
+
     alias exa='/usr/local/bin/exa --long --header --group --all --git --time-style=long-iso'
     alias exa-tree='exa --tree --level=2'
     alias exa-node='exa --tree --level=5 --git-ignore --ignore-glob="*node_modules*" --ignore-glob="*.git*"'
+else
+    alias nano='/usr/bin/nano -lc'
 fi
 
 if [ "$(which docker | cut -d" " -f1)" != "" ]; then
