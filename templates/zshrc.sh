@@ -63,7 +63,7 @@ fi
 
 # load macos plugin if it is a mac
 if [ "${OSTYPE:0:6}" = "darwin" ]; then
-    plugins+=(osx)
+    plugins+=(macos)
 fi
 
 zstyle ':completion:*' special-dirs true
